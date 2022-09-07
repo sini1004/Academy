@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인하기</title>
+  <style>
+    body {background-color: #013CA6; color: #222;}
+    body > div {
+      width: 500px;
+      margin: 200px auto;
+      padding: 30px;
+      background-color: white;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 4px 2px 10px rgba(0, 17, 49, 0.7);
+    }
+    #p1 {
+      font-size: 18px;
+    }
+    #p2 {
+      background-color: #013CA6;
+      color: white;
+      line-height: 3;
+      border-radius: 10px;
+    }
+    big {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>로그인하기</h1>
+    <p id="p1">
+      내가 입력한 아이디와 패스워드
+    </p>
+    <p id="p2">
+      로그인여부
+    </p>
+  </div>
+  <!-- <div>
+    <h1>로그인하기</h1>
+    <p id="p1">
+      <script>
+        let id = prompt('아이디를 입력해주세요.', '');
+        let pw = prompt('패스워드를 입력해주세요.', '');
+        document.write(`내가 입력한 아이디 :  ${id}  <br/>내가 입력한 패스워드 :  ${pw}`);
+      </script>
+    </p>
+    <p id="p2">
+      <script>
+        if (id == 'abc' && pw =='1234'){
+          document.write('아이디, 패스워드를 제대로 입력하셨습니다.');
+        } else {
+          document.write('아이디나 패스워드를 잘못 입력하셨습니다.');
+        }
+      </script>
+    </p>
+  </div> -->
+
+  <script>
+    let id = prompt('아이디를 입력해주세요.', '');
+    let pw = prompt('패스워드를 입력해주세요.', '');
+    const elP1 = document.querySelector('#p1');
+    const elP2 = document.querySelector('#p2');
+    let msg;
+
+    if( id == 'abc' && pw == '1234'){
+      msg = '로그인 <big>성공!</big>';
+    } else if( id == 'abc' || pw == '1234') {
+      msg = '아이디 혹은 패스워드 중 하나가 틀렸습니다.';
+    } else {
+      msg = '아이디와 패스워드 모두 틀렸습니다.';
+    }
+
+    elP1.innerHTML = `내가 입력한 아이디 : ${id} <br/> 내가 입력한 패스워드 : ${pw}`
+    elP2.innerHTML = msg;
+    
+  </script>
+</body>
+</html>
