@@ -1,0 +1,70 @@
+sㄴ<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문 - if04</title>
+    <style>
+        body{
+            background: #013CA6;
+            color: #fff;
+            text-align: center;
+        }
+        body > div{
+            width: 500px;
+            background: #fff;
+            border-radius: 10px;
+            margin: 200px auto;
+            padding: 20px;
+            color: #013CA6;
+        }
+        #p1{
+            font-size: 20px;
+        }
+        #p2{
+            background: #013CA6;
+            color: #fff;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>로그인하기</h1>
+        <p id="p1">
+            내가 입력한 아이디와 패스워드
+        </p>
+        <p id="p2">
+            로그인 여부
+        </p>
+    </div>
+    <script>
+      let id = prompt('아이디를 입력해주세요.', '');
+      let pw = prompt('패스워드를 입력해주세요.', '');
+      const elP1 = document.querySelector('#p1');
+      const elP2 = document.querySelector('#p2');
+      let msg;
+
+      if( id == 'abc' && pw == '1234'){
+        msg = '로그인 <big>성공!</big>';
+      } else if( id == 'abc' || pw == '1234') {
+        if ( id != 'abc') {
+          msg = '<strong>아이디</strong>가 틀렸습니다.';
+        } else {
+          msg = '<strong>비밀번호</strong>가 틀렸습니다.';
+        }
+      } else {
+        msg = '아이디와 패스워드 모두 틀렸습니다.';
+      }
+
+      elP1.innerHTML = `내가 입력한 아이디 : ${id} <br/> 내가 입력한 패스워드 : ${pw}`
+      elP2.innerHTML = msg;
+    </script>
+</body>
+</html>
+
+

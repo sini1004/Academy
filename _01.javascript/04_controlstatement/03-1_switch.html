@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제어문 - switch</title>
+  <style>
+    body {background-color: #013CA6; color: #222;}
+    body > div {
+      width: 500px;
+      margin: 200px auto;
+      padding: 30px;
+      background-color: white;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 4px 2px 10px rgba(0, 17, 49, 0.7);
+    }
+    #p1 {
+      background-color: #013CA6;
+      color: white;
+      line-height: 3;
+      border-radius: 10px;
+    }
+    big {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>점수 검색</h1>
+    <p id="p1">
+      아직 모르겠어요.
+    </p>
+  </div>
+  
+  <script>
+
+    let subj = prompt('영어, 국어, 수학, 과학 중에 알고 싶은 점수는?', '');
+    const elP1 = document.querySelector('#p1');
+
+    switch(subj){
+      case '영어' : 
+        subj += '는 88점 입니다.'
+        break;
+      case '국어' : 
+        subj += '는 63점 입니다.'
+        break;
+      case '수학' : 
+        subj += '는 90점 입니다.'
+        break;
+      case '과학' : 
+        subj += '는 77점 입니다.'
+        break;
+      default : 
+        subj += '는 해당 과목에 없습니다.'
+    }
+    elP1.textContent = subj;
+
+  </script>
+</body>
+</html>
