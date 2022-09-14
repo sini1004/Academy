@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제어문 - switch</title>
+  <style>
+    body {background-color: #013CA6; color: #222;}
+    body > div {
+      width: 500px;
+      margin: 200px auto;
+      padding: 30px;
+      background-color: white;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 4px 2px 10px rgba(0, 17, 49, 0.7);
+    }
+    #p1 {
+      font-size: 18px;
+    }
+    #p2 {
+      background-color: #013CA6;
+      color: white;
+      line-height: 3;
+      border-radius: 10px;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <h1>적정 몸무게 구하기</h1>
+    <p id="p1">
+      <script>
+        let name =  prompt(`당신의 이름은?`);
+        let height = prompt(`당신의 키는?`);
+        let weight = prompt(`당신의 몸무게는?`);
+        // let weight = 80;
+
+        //document.write('이름 : ' + name + '<br> 키 : ' + height + "cm <br/> 몸무게 : "+ weight +'kg'+);
+        document.write(`이름 : ${name} <br> 키 : ${height}cm<br/>  몸무게 : ${weight}kg`);
+      </script>
+    </p>
+    <p id="p2">
+      <script>
+        //적정체중 = (키 - 100) * 0.9  /  위아래로 3kg 이내
+
+        let normalWeight = (height - 100) * 0.9;
+
+        let result = weight >= normalWeight - 3 && weight <= normalWeight+3;
+
+        let resultA = result ? '적정 체중입니다.' : '적정 체중이 아닙니다.'
+        document.write(resultA);
+        document.write(`<br/> 적정체중은 ${normalWeight}kg 입니다.`);
+      </script>
+    </p>
+  </div>
+  
+</body>
+</html>
