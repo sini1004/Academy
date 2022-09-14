@@ -57,7 +57,7 @@ header h1 a {
 header h1 a span {
   display: none;
 }
-header .top_left button .ico_gnb_menu {
+header .top_left .ico_gnb_menu {
   width: 24px;
   height: 24px;
   background-position: -520px -60px;
@@ -69,7 +69,7 @@ header .top_left, .top_right {
 header .top_left {
   left: 12px;
 }
-header .top_left button {
+header .top_left > button {
   padding: 5px;
 }
 header .top_left .ico_dot {
@@ -80,7 +80,7 @@ header .top_left .ico_dot {
 header .top_right {
   right: 12px;
 }
-header .top_right button {
+header .top_right > button {
   padding: 5px;
 }
 header .top_right .ico_search, header .top_right .ico_global {
@@ -228,12 +228,11 @@ article .box .article_con img {
   line-height: 48px;
   font-size: 15px;
   font-weight: bold;
+  text-align: left;
 }
 #gnb .inner .list_menu .ico_dot {
-  position: absolute;
-  top: 13px;
-  width: 8px;
-  height: 8px;
+  position: relative;
+  bottom: 12px;
 }
 #gnb .inner .list_menu .ico_arrow {
   float: right;
@@ -243,12 +242,8 @@ article .box .article_con img {
   background-position: -360px 0;
   margin-top: 15px;
 }
-#gnb .inner .list_menu .on {
-  display: inline-block;
-  width: 16px;
-  height: 15px;
+#gnb .inner .list_menu .ico_arrow.on {
   background-position: -340px 0;
-  margin-top: 15px;
 }
 #gnb .inner .list_menu li.line {
   margin-bottom: 16px;
@@ -256,50 +251,114 @@ article .box .article_con img {
   border-bottom: 1px solid #eff0f2;
 }
 
-#gnb .inner .banner {
-
-}
-#gnb .inner .banner img {
-  width: 100%;
-}
-#gnb .inner .login {
-
-}
-
-.charactor_wrap {}
-.list_charactor {
-  padding: 16px 24px;
-  font-size: 0;
+.charactor_wrap { }
+.list_charactor { 
+  padding:16px 14px; 
+  font-size: 0;   /* 자식요소 inline-block 사용시 여백을 막아주는 방법 */
 }
 .list_charactor li {
-  display: inline-block;
-  width: 25%;
+  display:inline-block;
+  width:25%;
+  padding-bottom:20px;
 }
-.list_charactor li a {}
+.list_charactor li a {
+  display: block;
+  padding:0 10px;
+}
 
 .img_charactor {
-  display: block;
-  width: 100%;
-  padding-top: 100%;
-  background: no-repeat 50% 50% / cover;
-  border-radius: 50%;
+  display:block;
+  width:100%;
+  padding-top:100%;
+  background:no-repeat 50% 50% / cover;
+  border-radius:50%;
 }
 .txt_charactor {
-  display: block;
-  text-align: center;
-  font-size: 12px;
-  padding-top: 8px;
+  display:block;
+  text-align:center;
+  font-size:12px;
+  padding-top:8px;
 }
 
 .charactor01 .img_charactor {
-  background-image: url('../img/character/character_20220531165251_96.png');
+  background-image:url('../img/character/character_20220531165251_96.png');
 }
 .charactor02 .img_charactor {
-  background-image: url('../img/character/character_20220531165311_96.png');
+  background-image:url('../img/character/character_20220531165311_96.png');
 }
 .charactor03 .img_charactor {
-  background-image: url('../img/character/character_20220531165333_96.png');
+  background-image:url('../img/character/character_20220531165333_96.png');
 }
 .charactor04 .img_charactor {
-  background-image: url('../img/character/character_20220531165353_96.png');
+  background-image:url('../img/character/character_20220531165353_96.png');
 }
+.charactor05 .img_charactor {
+  background-image:url('../img/character/character_20220531165418_96.png');
+}
+.charactor06 .img_charactor {
+  background-image:url('../img/character/character_20220531165457_96.png');
+}
+.charactor07 .img_charactor {
+  background-image:url('../img/character/character_20220531165949_OFF.jpg');
+}
+
+.charactor01:hover .img_charactor {
+  background-image:url('../img/character/character_20220531165245_96.png');
+}
+.charactor02:hover .img_charactor {
+  background-image:url('../img/character/character_20220531165306_96.png');
+}
+.charactor03:hover .img_charactor {
+  background-image:url('../img/character/character_20220531165329_96.png');
+}
+.charactor04:hover .img_charactor {
+  background-image:url('../img/character/character_20220531165349_96.png');
+}
+.charactor05:hover .img_charactor {
+  background-image:url('../img/character/character_20220531165413_96.png');
+}
+.charactor06:hover .img_charactor {
+  background-image:url('../img/character/character_20220531165452_96.png');
+}
+.charactor07:hover .img_charactor {
+  background-image:url('../img/character/character_20220531165946_ON.jpg');
+}
+
+
+
+.category_wrap { }
+.list_category {
+  padding:8px 10px 8px 24px;
+  font-size:0;  
+}
+.list_category li { 
+  display:inline-block;
+  width:50%;
+}
+.list_category li a { 
+  display:block;
+  font-size:14px;
+  padding:12px 0;
+}
+
+.banner { padding:0px 10px 0 24px  }
+.banner img { width:100%; }
+
+
+.login {}
+.login a { 
+  display:block; 
+  text-align:center;
+  padding:25px;
+}
+.login .ico_gnb_lock {
+  display:inline-block;
+  width:24px; height:24px;
+  background-position:-560px -20px;
+  vertical-align:top;
+} 
+
+
+
+
+
