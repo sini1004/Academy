@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체 - Object</title>
+  <style>
+    body {background-color: #ec9a00; color: #222;}
+    body > div {
+      width: 500px;
+      margin: 200px auto;
+      padding: 30px;
+      background-color: white;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 4px 2px 10px rgba(172, 112, 0, 0.7);
+    }
+    #p1 {
+      font-size: 28px;
+      color: #333;
+      border: 2px solid #ec9a00;
+      border-left: 0;
+      border-right: 0;
+      padding: 10px 0;
+    }
+    #p2 {
+      font-size: 21px;
+      color: #333;
+      line-height: 3;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div>
+    <h2>예약정보</h2>
+    <p id="p1">호텔이름</p>
+    <p id="p2">빈방 수</p>
+    <p id="p3">개의 방이 남아있습니다.</p>
+  </div>
+
+  <script>
+    //객체생성
+    let hotel = {
+      hotelName : '인천 파라다이스 시티 호텔&리조트',
+      rooms : 60,
+      booked : 48,
+      binRooms : function(){
+        let free = hotel.rooms - hotel.booked;
+        return free;
+      }
+    }
+
+    const elP1 = document.getElementById('p1');
+    const elP2 = document.getElementById('p2');
+
+    elP1.textContent = hotel.hotelName;
+    elP2.textContent = hotel.binRooms();
+
+  </script>
+  
+</body>
+</html>
