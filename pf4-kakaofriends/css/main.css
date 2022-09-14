@@ -267,9 +267,39 @@ article .box .article_con img {
 }
 
 .charactor_wrap {}
-.list_charactor {}
-.list_charactor li {}
+.list_charactor {
+  padding: 16px 24px;
+  font-size: 0;
+}
+.list_charactor li {
+  display: inline-block;
+  width: 25%;
+}
 .list_charactor li a {}
 
-.img_charactor {}
-.txt_charactor {}
+.img_charactor {
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+  background: no-repeat 50% 50% / cover;
+  border-radius: 50%;
+}
+.txt_charactor {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 8px;
+}
+
+.charactor01 .img_charactor {
+  background-image: url('../img/character/character_20220531165251_96.png');
+}
+.charactor02 .img_charactor {
+  background-image: url('../img/character/character_20220531165311_96.png');
+}
+.charactor03 .img_charactor {
+  background-image: url('../img/character/character_20220531165333_96.png');
+}
+.charactor04 .img_charactor {
+  background-image: url('../img/character/character_20220531165353_96.png');
+}
