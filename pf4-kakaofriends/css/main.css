@@ -222,6 +222,7 @@ article .box .article_con img {
 }
 #gnb .inner .btn_menu {
   position: relative;
+  width: 100%;
   display: block;
   padding: 0 24px;
   line-height: 48px;
