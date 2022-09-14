@@ -12,7 +12,10 @@ li {
 }
 a { 
   text-decoration: none;
+<<<<<<< HEAD
   color: #000;
+=======
+>>>>>>> 92db50fe19709d7b82f5517ffacd8416648d1c89
 }
 img {
   border: 0;

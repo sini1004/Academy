@@ -1,5 +1,11 @@
 /**
+<<<<<<< HEAD
 반복제어 : break,continue
+=======
+break
+
+continue
+>>>>>>> 92db50fe19709d7b82f5517ffacd8416648d1c89
  */
 
 for(let i = 0; i < 20; i++){
