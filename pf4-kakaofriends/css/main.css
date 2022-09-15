@@ -200,10 +200,15 @@ article .box .article_con img {
   bottom: 0;
   width: 304px;
   background-color: white;
+  overflow: hidden;
   z-index: 9999;
 }
 #gnb .inner {
-
+  width: 304px;
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 17px;
+  box-sizing: content-box;
 }
 #gnb .inner .info_user {
   padding:32px 24px 24px;
