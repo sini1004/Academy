@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script defer src="js/main.js"></script>
+  <script defer src="js/main.js"></script> <!-- defer : 문서 제일 마지막에 인식 -->
 </head>
 <body>
 
@@ -78,20 +78,21 @@
   <div id="gnb">
     <div class="inner">
       <div class="info_user">
-        <a href="#" class="info_login"><u>로그인</u>이 필요해요!</a>
+        <a href="#" class="info_login login_require"><u>로그인</u>이 필요해요!</a>
         <a href="#" class="info_inquiry">비회원 주문조회<span class="ico_friends ico_arrow_right">화살표</span></a>
       </div>
       <ul class="list_menu">
         <li>
-          <a href="#" class="btn_menu">장바구니 내역</a>
+          <a href="#" class="btn_menu login_require">장바구니 내역</a>
         </li>
         <li class="line">
-          <a href="#" class="btn_menu">주문·배송 내역</a>
+          <a href="#" class="btn_menu login_require">주문·배송 내역</a>
         </li>
         <li>
-          <button href="#" class="btn_menu btn_charactor">캐릭터
-            <span class="ico_friends ico_arrow">펼치기</span></button>
-            <div class="charactor_wrap">
+          <button href="#" class="btn_menu btn_sub">캐릭터
+            <span class="ico_friends ico_arrow">펼치기</span>
+          </button>
+            <div class="list_sub_wrap">
               <ul class="list_charactor">
                 <li class="charactor01">
                   <a href="#">
@@ -138,9 +139,10 @@
             </div>
         </li>
         <li class="line">
-          <button href="#" class="btn_menu btn_category">카테고리
-            <span class="ico_friends ico_arrow">펼치기</span></button> 
-            <div class="category_wrap">
+          <button href="#" class="btn_menu btn_sub">카테고리
+            <span class="ico_friends ico_arrow">펼치기</span>
+          </button> 
+            <div class="list_sub_wrap">
               <ul class="list_category">
                 <li><a href="#">전체</a></li>
                 <li><a href="#">토이</a></li>
