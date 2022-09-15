@@ -148,7 +148,7 @@ article .box {
 article .box .article_header {
   padding-bottom: 15px;
 }
-article .box .article_header .profile {
+.box .article_header .profile {
   float: left;
   display: inline-block;
   width: 40px;
@@ -158,28 +158,68 @@ article .box .article_header .profile {
   background-repeat: no-repeat;
   text-indent: -9999px;
 }
-article .box .article_header .info {
+.box .article_header .info {
   padding-left: 46px;
 }
-article .box .article_header .info strong {
+.box .article_header .info strong {
   display: block;
   line-height: 24px;
 }
 
-article .box .article_header .info .txt_time {
+.box .article_header .info .txt_time {
   display: block;
   font-size: 13px;
   line-height: 16px;
   color: #909092;
 }
-article .box .article_con {
-
-} 
-article .box .article_con img {
+.box .article_con img {
   width: 100%;
   border-radius: 10px;
 }
-
+.box .article_feed {
+  margin-top: 20px;
+}
+.box .article_feed .feed_left .ico_feed_like {  
+  display: inline-block;
+  width: 27px;
+  height: 25px;
+  background-position: -162px -103px;
+}
+.box .article_feed .feed_left {
+  float: left;
+}
+.box .article_feed .feed_left .ico_feed_com {
+  display: inline-block;
+  width: 27px;
+  height: 25px;
+  background-position: -123px -103px;
+  margin-left: 10px;
+}
+.box .article_feed .feed_right {
+  float: right;
+}
+.box .article_feed .feed_right .ico_feed_share {
+  display: inline-block;
+  width: 27px;
+  height: 25px;
+  background-position: -83px -103px;
+}
+.box .article_feed .feed_write {
+  clear: both;
+  padding: 10px 0;
+}
+.box .article_feed .feed_write span{
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: -0.8px;
+  margin-bottom: 10px;
+}
+.box .article_feed .feed_write p{
+  font-size: 18px;
+  font-weight: bold;
+}
+  
 /*  */
 .dark {
   position:fixed;
@@ -235,8 +275,7 @@ article .box .article_con img {
 #gnb .inner .list_menu {
   padding: 24px 0;
 }
-#gnb .inner .list_menu > li {
-}
+
 #gnb .inner .btn_menu {
   position: relative;
   width: 100%;
@@ -361,7 +400,10 @@ article .box .article_con img {
 }
 
 .banner { 
-  padding:0px 10px 0 20px; 
+}
+.banner a {
+  display: block;
+  padding: 0 14px;
 }
 .banner img { 
   width:100%; 
