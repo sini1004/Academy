@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+div { 
+  border:5px solid rgb(161, 119, 196);
+  background: rgb(233, 177, 255);
+  line-height:200px;
+  box-sizing:border-box;
+}
+
+div>div {
+  border:2px solid rgb(66, 66, 66);
+  background: pink;
+}

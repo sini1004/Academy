@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+  <style>
+    * { 
+      margin:0; padding:0;
+      box-sizing:border-box;
+    }
+    header, aside, article { 
+      border:1px solid rgb(17, 87, 0); 
+      padding:20px; 
+      margin:10px
+    }
+    .pc { 
+      display: none;
+      background: rgb(246, 252, 191);
+    }
+    aside li {
+      list-style: none;
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .div2 > div { 
+      background:rgb(204, 248, 184); 
+      margin:10px; 
+    }
+    footer { 
+      text-align:center; 
+    }
+
+    /* 600px ~ 큰모바일~태블릿 */
+    @media (min-width:600px){
+      .div2 {
+        display: flex;
+      }
+      .div2 > div {
+        flex: 1;
+      }
+    }
+
+    /* 960px~ 데스크탑 */
+    @media (min-width:960px){
+      main{ 
+        display:flex;
+      }
+      aside {
+        width: 20%;
+      }
+      aside li {
+        display: block;
+      }
+      section {
+        width: 80%;
+      }
+      .pc {
+        display: block;
+      }
+    }    
+
+    /* 1400px~ 큰 데스크탑*/
+    @media (min-width:1400px){
+      main, .header_wrap { 
+        width:1400px; 
+        margin:auto; 
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header_wrap">
+      <h1>Responsive Layout</h1>
+    </div>
+  </header>
+  <main>
+    <aside>
+      <ul>
+        <li>MENU_1</li>
+        <li>MENU_2</li>
+        <li>MENU_3</li>
+        <li>MENU_4</li>
+        <li>MENU_5</li>
+        <li>MENU_6</li>
+      </ul>
+    </aside>
+
+    <section>
+      <article>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed pellentesque nisl. Sed mollis vitae enim ac vehicula. Phasellus sit amet nibh ac nibh luctus viverra. Maecenas ac magna et nibh pretium gravida. Aliquam a erat ultrices, imperdiet ante et, porttitor dui. Praesent rhoncus, risus in tristique viverra, ligula dui consequat sem, quis egestas dolor tellus sed nibh. Proin molestie eleifend tortor, eget maximus dolor viverra ac. Nullam pretium tellus ligula, at tempor nibh hendrerit eu. Etiam dictum semper velit, a facilisis nisl mattis mattis. Vivamus venenatis dignissim nisi sit amet tempus. Sed malesuada lacus id dapibus pellentesque. Suspendisse ultrices leo et consequat laoreet.</p>
+        <p>Morbi ante lacus, lobortis sed vehicula nec, maximus et orci. Aliquam consequat turpis nec elit vulputate iaculis. Praesent lorem augue, elementum ut ex a, gravida consectetur massa. Sed in maximus arcu, nec porttitor justo. Aenean dolor risus, tincidunt ut rutrum non, pretium a ex. Proin sit amet mi sit amet dolor rutrum ornare. Aliquam posuere metus sapien, non pulvinar nisi maximus vitae. Sed rhoncus magna lectus, bibendum rhoncus lacus aliquet eget. Mauris hendrerit nisi ac neque venenatis sagittis. Duis blandit, massa feugiat sodales tincidunt, lorem eros ultrices dui, posuere aliquam lorem lectus sed eros. In pharetra sodales lobortis.</p>
+        <p class="pc">Nam mattis orci massa, id consectetur sapien gravida finibus. Pellentesque et ipsum tellus. Praesent a vestibulum ipsum. Aliquam erat volutpat. Sed egestas varius velit et posuere. Nunc vitae molestie lectus. Proin arcu nibh, condimentum vel convallis eget, porta sed metus. Suspendisse condimentum lobortis eros, vitae vehicula tellus ultrices tempor. Donec leo nulla, consectetur id iaculis eu, congue ac ligula. Etiam a turpis justo. Praesent ut ante non dui consectetur dictum.</p>
+      </article>
+      <article>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed pellentesque nisl. Sed mollis vitae enim ac vehicula. Phasellus sit amet nibh ac nibh luctus viverra. Maecenas ac magna et nibh pretium gravida. Aliquam a erat ultrices, imperdiet ante et, porttitor dui. Praesent rhoncus, risus in tristique viverra, ligula dui consequat sem, quis egestas dolor tellus sed nibh. Proin molestie eleifend tortor, eget maximus dolor viverra ac. Nullam pretium tellus ligula</p>
+        <p>at tempor nibh hendrerit eu. Etiam dictum semper velit, a facilisis nisl mattis mattis. Vivamus venenatis dignissim nisi sit amet tempus. Sed malesuada lacus id dapibus pellentesque. Suspendisse ultrices leo et consequat laoreet.</p>
+        <p class="pc">Morbi ante lacus, lobortis sed vehicula nec, maximus et orci. Aliquam consequat turpis nec elit vulputate iaculis. Praesent lorem augue, elementum ut ex a, gravida consectetur massa. Sed in maximus arcu, nec porttitor justo. Aenean dolor risus, tincidunt ut rutrum non, pretium a ex. Proin sit amet mi sit amet dolor rutrum ornare. Aliquam posuere metus sapien, non pulvinar nisi maximus vitae. Sed rhoncus magna lectus, bibendum rhoncus lacus aliquet eget. Mauris hendrerit nisi ac neque venenatis sagittis. Duis blandit, massa feugiat sodales tincidunt, lorem eros ultrices dui, posuere aliquam lorem lectus sed eros. In pharetra sodales lobortis.</p>
+      </article>
+      <article class="div2">
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed pellentesque nisl. Sed mollis vitae enim ac vehicula. Phasellus sit amet nibh ac nibh luctus viverra. Maecenas ac magna et nibh pretium gravida. Aliquam a erat ultrices, imperdiet ante et, porttitor dui. Praesent rhoncus, risus in tristique viverra</div>
+        <div> elit vulputate iaculis. Praesent lorem augue, elementum ut ex a, gravida consectetur massa. Sed in maximus arcu, nec porttitor justo. Aenean dolor risus, tincidunt ut rutrum non, pretium a ex. Proin sit amet mi sit amet dolor rutrum ornare. Aliquam posuere metus sapien, non pulvinar nisi maximus vitae. Sed rhoncus magna lectus.q</div>
+      </article>
+    </section>
+
+  </main>
+  <footer>
+    Responsive Layout Practice
+  </footer>
+</body>
+</html>
+

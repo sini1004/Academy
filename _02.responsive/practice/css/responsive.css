@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/* 1200px 보다 작을때 */
+@media (max-width:1199px){
+  #contets { width:100%; }
+  section { width:50%; height:200px; }
+
+  .footer_in { width:100%; }
+
+}
+
+/* 960px 보다 작을때 (태블릿) */
+
+
+/* 600px 보다 작을때 (핸드폰) */
+@media (max-width:599px) {
+  section { width:100%; }
+
+  .footer_in { text-align:center; }
+
+}
