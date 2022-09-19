@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>랜덤이미지</title>
+  <style>
+    body { margin:0; padding: 0;}
+  </style>
+</head>
+<body>
+  <article class="rd1"> 
+    <h2>랜덤이미지</h2>
+    <div><img src="img/math_img_2.png" alt=""></div>  
+    <script>
+      const elImg = document.querySelector('.rd1 img');
+      let imgUrl = ['img/math_img_1.png','img/math_img_2.png','img/math_img_3.png','img/math_img_4.png'] //이미지들을 배열로 변수에 넣음.
+      let imgNum = imgUrl.length; //배열의 아이템(이미지)의 갯수.
+      let rd = Math.random(); //랜덤값을 얻어옴 (소수점 이하).
+      let random = Math.floor(rd * imgNum); //랜덤값에 이미지 숫자를 곱하고, 소수점 이하자리는 없애줌. => 0~3까지 나오게 됨
+
+      console.log(random);
+      elImg.src = imgUrl[random];
+      console.log(elImg);
+    </script>
+  </article>
+
+  <article class="rd2">
+    <h2>버튼랜덤이미지</h2>
+    <div><img src="img/pic1.jpg" alt="" style="width: 600px;"></div>
+    <button>랜덤이미지</button>
+    <script>
+      const elImg2 = document.querySelector('.rd2 img');
+      const elBtn = document.querySelector('.rd2 button');
+      let imgUrl2 = ['img/pic1.jpg','img/pic2.jpg','img/pic3.jpg','img/pic4.jpg','img/pic5.jpg','img/pic6.jpg']   
+      let imgNum2 = imgUrl2.length;
+
+      let imgChange = () => {
+        let random2 = Math.floor(Math.random()*imgNum2);
+        elImg2.src = imgUrl2[random2];
+        console.log(random2);
+      }    
+      elBtn.onclick = () => {
+        imgChange();
+      };
+    </script>
+  </article>
+
+
+
+</body>
+</html>
