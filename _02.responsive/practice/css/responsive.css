@@ -2,20 +2,100 @@
 
 /* 1200px 보다 작을때 */
 @media (max-width:1199px){
-  #contets { width:100%; }
-  section { width:50%; height:200px; }
-
-  .footer_in { width:100%; }
+  .header_in { 
+    width:100%;
+    padding:0 10px;
+  }
+  #contets { 
+    width:100%; 
+  }
+  section { 
+    width:50%; 
+    height:200px; 
+  }
+  .footer_in { 
+    width:100%; 
+  }
 
 }
 
+
 /* 960px 보다 작을때 (태블릿) */
+@media (max-width:960px){
+  h1 { 
+    font-size:25px;
+  }
+  .sign span { 
+    display:none; 
+  }
+  nav { 
+    margin-left:-150px;
+  }
+  nav a {
+    margin:0 7px;
+    font-size:15px;
+  }
+}
+
+/* 720px 보다 작을때 (핸드폰) */
+@media (max-width:720px) {
+  .header_in { 
+    height:50px; 
+  }
+  h1 { 
+    position:absolute; 
+    left:50%; 
+    transform:translate(-50%);
+    line-height:50px;   
+    float:none;
+  }
+
+  nav { 
+    position:fixed; 
+    width:300px;
+    left:-300px; 
+    top:0; 
+    bottom:0;
+    margin-left:0;
+    background:#fff;
+    padding:50px 0 0 20px;
+  }
+  nav li { 
+    float:none; 
+  }
+  nav a {
+    margin:0;
+    font-size:18px;
+    line-height:40px;
+    color:#111;
+  }
+  nav button { 
+    display:block;
+    position:absolute; 
+    top:30px; 
+    right:30px 
+  }
+  
+
+  .allBtn { 
+    display:block; 
+    line-height:50px;
+  }
+  .sign {   
+    float:none;  
+    line-height:50px; 
+    position:absolute; 
+    top:0; 
+    right:10px;
+  }
 
 
-/* 600px 보다 작을때 (핸드폰) */
-@media (max-width:599px) {
-  section { width:100%; }
-
-  .footer_in { text-align:center; }
+  section { 
+    float:none; 
+    width:100%; 
+  }
+  .footer_in { 
+    text-align:center; 
+  }
 
 }
