@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가위·바위·보 게임</title>
+</head>
+<body>
+  <h1>가위·바위·보 맞추기</h1>
+
+  <script>
+    let game = '바위✊🏻';
+
+    switch (game) {
+      case '가위✌🏻' : 
+        gameN = 1;
+        break;
+      case '바위✊🏻' : 
+        gameN = 2;
+        break;
+      case '보🖐🏻' : 
+        gameN = 3;
+        break;
+
+      default :
+        alert('잘못 입력하셨습니다.');
+    }
+
+    let com = Math.ceil(Math.random()*3);
+
+    document.write(`내가 고른 것은?  ${game} <br> 컴퓨터가 고른 것은? `);
+    console.log(com);
+  </script>
+</body>
+</html>
