@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>date 객체</title>  
+  <style>
+    body { background: #fff389;}
+    body > div { 
+      width:500px;
+      margin:200px auto;
+      padding:20px;
+      background: #ffe659;
+      text-align:center;
+    }
+    #p1 { font-size: 20px; }
+    h2 { font-size:18px; color: #e99414; margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Date Object</h1>
+    <p id="p1"></p>
+  </div>
+
+  <script>
+    const today = new Date();
+    // document.write(Date()); //로컬PC에 설정된 현재 날짜, 시간 데이터를 가져온다.
+    // document.write(today);
+
+    let msg = `<h2>오늘 날짜 정보</h2>`;
+    msg += `현재 년도 : ${today.getFullYear()}년 <br/> 현재 월 : ${today.getMonth()+1}월 <br/> 
+            현재 일 : ${today.getDate()}일<br/> 현재 요일 : ${today.getDay()}번째 요일<br/>`; 
+
+    msg += `<h2>현재 시간 정보</h2>`;
+    msg += `${today.getHours()}시 ${today.getMinutes()}분 ${today.getSeconds()}초 <br/><hr>`; 
+
+  
+    //UTC기준(협정 세계시, 1970년 1월 1일 자정)
+    const dDay = new Date(today.getFullYear(), 11, 31);
+    const diffDay = dDay.getTime() - today.getTime();  //getTime() milliseconds
+    //today.getTime() : 현재시간에서 UTC시간을 빼줌 => 1970년 1월 1일부터 현재까지 몇초(밀리세컨)이 지났는지 알아옴
+
+    msg += `<h2>올해 남은 날짜</h2>`;
+    
+    const diffDay_s = Math.ceil(diffDay/1000);
+    msg += `올해 마지막 날까지 ${diffDay_s}초가 남았습니다.<br/>`; 
+
+    const diffDay_m = Math.ceil(diffDay_s/60);
+    msg += `올해 마지막 날까지 ${diffDay_m}분이 남았습니다.<br/>`; 
+
+    const diffDay_h = Math.ceil(diffDay_m/60);
+    msg += `올해 마지막 날까지 ${diffDay_h}시간이 남았습니다.<br/>`; 
+    
+    const diffDay_d = Math.ceil(diffDay_h/24);
+    msg += `올해 마지막 날까지 ${diffDay_d}일이 남았습니다.<br/>`; 
+
+    
+
+    msg += `<h2>내 생일까지 남은 날짜는?</h2>`;
+    const bDay = new Date('April 1, 2023'); 
+    const bDayDate = bDay.toDateString(); //날짜만 가져옴.
+    // const bDay = new Date(today.getFullYear()+1, 3, 1); 
+    const diffBirth = bDay.getTime() - today.getTime();
+    
+    const diffBirthDay = Math.ceil(diffBirth/1000/60/60/24);
+    msg += `내 생일은 ${bDayDate}<br/>`; 
+    msg += `${diffBirthDay}일이 남았습니다.<br/>`; 
+
+    let elP1 = document.querySelector('#p1');
+    elP1.innerHTML = msg;
+
+  </script>
+
+</body>
+</html>

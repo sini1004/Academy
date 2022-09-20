@@ -10,27 +10,34 @@
   <h1>가위·바위·보 맞추기</h1>
 
   <script>
-    let game = '바위✊🏻';
+    let game = prompt('가위, 바위, 보 중 선택해주세요!', '');
 
     switch (game) {
-      case '가위✌🏻' : 
+      case '가위' : 
         gameN = 1;
         break;
-      case '바위✊🏻' : 
+      case '바위' : 
         gameN = 2;
         break;
-      case '보🖐🏻' : 
+      case '보' : 
         gameN = 3;
         break;
 
       default :
         alert('잘못 입력하셨습니다.');
+        location.reload(); //location객체 중에 새로고침을 해주는 메서드
     }
 
     let com = Math.ceil(Math.random()*3);
 
-    document.write(`내가 고른 것은?  ${game} <br> 컴퓨터가 고른 것은? `);
-    console.log(com);
+    document.write(`내가 고른 것은? ${game} <br> 컴퓨터가 고른 것은? <img src = "img/math_0${com}.jpg"> <hr> `);
+    
+    if(gameN > com) {
+      document.write('<img src = "img/game1.png">');
+    } else {      
+      document.write('<img src = "img/game2.jpg">');
+    }
+
   </script>
 </body>
 </html>
