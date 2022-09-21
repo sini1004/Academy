@@ -6,6 +6,7 @@
   left :0;
   width: 100%;
   background-color: transparent;
+  z-index: 999;
 }
 header {
   position: relative;
@@ -19,7 +20,7 @@ header {
 }
 .logo a {
   display: block;
-  color: white;
+  color: #fff;
   font-weight: normal;
   line-height: 1.2;
 }
@@ -52,7 +53,7 @@ header {
 #menu > li > a {
   display:block;
   padding: 10px 20px;
-  color: white;
+  color: #fff;
 }
 
 
@@ -110,15 +111,33 @@ header {
 
 main { background:rgb(201, 201, 201)}
 .main_full{}
-.main_visual {
-  width: 100%;
-  height: 100vh;
+
+.main_visual { 
+  position: relative;
+  width:100%; height:100vh;
 }
-.main_visual video{
-  width: 100%;
+.main_visual video {
+  width:100%; 
   height:100%;
   object-fit: cover;
 }
+
+.main_text_container {   
+  position:absolute;  
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.main_text {
+  font-size: 50px;
+  color: #fff;
+}
+.main_text_resevation {}
+.main_text_resevation a {}
+
+
 section {}
 
 .main_visual {}
