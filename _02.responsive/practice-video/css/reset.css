@@ -4,6 +4,9 @@
   margin: 0; padding: 0;
   box-sizing: border-box;
 }
+body { 
+  font-family: 'Noto Sans KR', sans-serif;
+}
 header, main, section, aside, article, footer, nav, menu, details,figure, figcaption {
   display: block;
 }
