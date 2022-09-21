@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM(Document Object Model)</title>  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #545e75;}
+    li { list-style: none; background-color: #82a3a1; margin-bottom: 5px; 
+      color: #fff; line-height: 50px; font-weight: 600;}
+    body > div { 
+      width:400px;
+      margin:200px auto;
+      padding:20px;
+      background: #f2ecd2;
+    }
+    h1 { text-align: center;}
+    h1 img {
+      width: 150px;
+    }
+    h2 { text-align: center; margin-bottom: 50px;}
+    .color1 { background-color: #cf5a8b;}
+    .color2 { background-color: #66a7c5;}
+    .color3 { background-color: #94c24a;}
+  </style>
+</head>
+<body>
+  <div id="page">
+    <h1><img src="icon.svg" alt=""></h1>
+    <h2>id, class로 선택</h2>
+    <ul>
+      <li id="one">비행기</li>
+      <li id="two">자전거</li>
+      <li class="color1">기차</li>
+      <li class="color2">버스</li>
+      <li class="color1">지하철</li>
+      <li class="color1">자동차</li>
+    </ul>
+  </div>
+  <script>
+    const elPage = document.getElementById('page');
+    elPage.style.backgroundColor = 'Khaki';
+    
+    document.getElementById('one').className = 'sky';
+    //id'one'가 있는 부분에 클라스 sky를 추가
+
+    two.style.color = 'black';  //id는 그냥 사용해도 됨 (class는 ❌)
+
+    const elColor = document.querySelector('.color1'); //class가 여러개일때는 첫번째거만 가져옴.
+    elColor1 = document.getElementsByClassName('color1');
+    console.log(elColor);
+    console.log(elColor1);
+    //class는 여러개가 있다는 것을 가정하고 배열 형태로 가져온다.  (하나만 있어도 배열 형태으로 가져옴)
+
+    // elColor1.className = 'color3';  -❌
+    elColor1[0].className = 'color3'; //배열의 아이템(배열값)을 꼭 찍어줘야 함.
+
+    if(elColor1.length >= 2){
+      elColor1[elColor1.length-1].className = 'sky';
+    }
+    //제일 마지막 배열값(아이템)에 클라스 sky로 바꿔준다. (length-1 => 전체 배열값-1 은 제일 마지막 배열값)
+  </script>
+</body>
+</html>
+
+

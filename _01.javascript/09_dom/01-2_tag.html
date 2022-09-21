@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML(Tag)</title>  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #545e75;}
+    li { list-style: none; background-color: #82a3a1; margin-bottom: 5px; 
+      color: #fff; line-height: 50px; font-weight: 600;}
+    body > div { 
+      width:400px;
+      margin:200px auto;
+      padding:20px;
+      background: #f2ecd2;
+    }
+    h1 { text-align: center;}
+    h1 img {
+      width: 150px;
+    }
+    h2 { text-align: center; margin-bottom: 50px;}
+    .color1 { background-color: #cf5a8b;}
+    .color2 { background-color: #66a7c5;}
+    .color3 { background-color: #94c24a;}
+    .color4 { background-color: #131313;}
+    .color5 { background-color: transparent;}
+    .line { text-decoration: underline overline;}
+  </style>
+</head>
+<body>
+  <div id="page">
+    <h1><img src="icon.svg" alt=""></h1>
+    <h2>HTML(Tag)선택</h2>
+    <ul>
+      <li>비행기</li>
+      <li>자전거</li>
+      <li>기차</li>
+      <li class="color1">버스</li>
+      <li class="color1">지하철</li>
+      <li class="color1 line">자동차</li>
+    </ul>
+  </div>
+  <script>
+    const elLi = document.getElementsByTagName('li'); //무조건 여러개 있다고 가정
+    console.log(elLi);
+
+    elLi[elLi.length-1].classList.remove('color1');
+    //elLi[3].className = 'line'; //className은 클라스 추가, 기존 클라스 바꿔줌.
+
+    for(let i = 0; i < elLi.length; i++){
+      elLi[i].classList.add('line');
+    }
+  </script>
+</body>
+</html>
+
+

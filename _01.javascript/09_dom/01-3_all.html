@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM(Document Object Model)</title>  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #545e75;}
+    li { list-style: none; background-color: #82a3a1; margin-bottom: 5px; 
+      color: #fff; line-height: 50px; font-weight: 100;}
+    body > div { 
+      width:400px;
+      margin:200px auto;
+      padding:20px;
+      background: #f2ecd2;
+    }
+    h1 { text-align: center;}
+    h1 img {
+      width: 150px;
+    }
+    h2 { text-align: center; margin-bottom: 50px;}
+    .color1 { background-color: #cf5a8b;}
+    .color2 { background-color: #66a7c5;}
+    .color3 { background-color: #94c24a;}
+    .color4 { background-color: #131313;}
+    .color5 { background-color: transparent;}
+    .line { text-decoration: underline overline;}
+    .line1 { text-decoration: underline;}
+  </style>
+</head>
+<body>
+  <div id="page">
+    <h1><img src="icon.svg" alt=""></h1>
+    <h2>모든 선택이 가능</h2>
+    <ul>
+      <li>비행기</li>
+      <li>자전거</li>
+      <li class="color1">기차</li>
+      <li class="color1">버스</li>
+      <li>지하철</li>
+      <li>자동차</li>
+    </ul>
+  </div>
+  
+  <script>
+    const el1 = document.querySelector('li.color1');
+    //querySelector - 모든 선택가능(tag, class, id), 여러개 일때는 첫번째 것만 선택
+    el1.classList.add('line');
+    
+    const el2 = document.querySelectorAll('li.color1');
+    console.log(el2);
+    el2[0].style.backgroundColor = 'black';
+
+    for(let n= 0; n < el2.length; n++) {
+      el2[n].style.fontWeight = 'bold';
+      // el2[n].style.cssText = 'font-weight:bold';
+    }
+
+    //style.cssText : css속성명을 사용해서 적용. 기존에 적용되어있는 css가 없어짐.
+
+  </script>
+
+</body>
+</html>
+
+

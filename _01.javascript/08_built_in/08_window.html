@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>window(browser)객체</title>
+  <style>
+    body { background: #8ed2f1;}
+    a{ text-decoration: none;}
+    body > div { 
+      width:500px;
+      margin:200px auto;
+      padding:20px;
+      background: #60a2c0;
+      text-align:center;
+    }
+    #p1 { font-size: 20px; }
+    h2 { font-size:22px; color: #ffffff; margin-top: 50px; }
+    .lo { padding-bottom:20px; overflow-x: auto; }
+    .btns { text-align:center;}
+  </style>
+</head>
+<body>
+
+  <div>
+    <h1>Browser Object Model(BOM)</h1>
+    <p id="p1"></p>
+  </div>
+  
+  <p class="btns">
+    <a href="javascript:window.history.back()">⬅ 뒤로가기</a> &nbsp;&nbsp;    <!-- //window 생략 가능 -->
+    <a href="javascript:rload()">🔄 새로고침</a>&nbsp;&nbsp;
+    <a href="">새창열기 ➡</a>
+  </p>
+
+  <script>
+    let msg = `<h2>현재 열려있는 브라우저 창</h2> <p>너비 : ${window.innerWidth} / 높이 : ${window.innerHeight} </p>`;
+    //브라우저 창의 너비와 높이
+
+    msg += `<h2>디바이스(화면,스크린)</h2> <p>너비 : ${window.screen.width} / 높이 : ${window.screen.height}</p>`;
+    //화면 전체 크기(모니터, 핸드폰 기기 자체의 크기)
+
+    msg += `<h2>히스토리</h2> <p>아이템 : ${window.history.length}</p>`;
+    //브라우저 히스토리에 저장된 페이지 갯수 (현재페이지 포함)
+    
+    msg += `<h2>현재 페이지의 위치</h2> <p class="lo">${window.location}</p>`;
+
+    document.querySelector('#p1').innerHTML = msg;
+
+    function rload(){
+      window.location.reload();     //새로고침, F5누른 효과
+    }
+
+    function winOpen(){
+      window.open('06_date.html','pop','width=500, height=500');
+    }
+    //window.open('웹페이지 주소','이름','속성들')
+
+    const btnNew = document.querySelector('.btns a nth-child(3)');
+    btnNew.onclick = winOpen; //함수의 소괄호()를 생략(로딩이 되자 실행되는 것을 막기 위해)
+
+  </script>
+  
+</body>
+</html>
