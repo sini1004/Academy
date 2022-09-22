@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', '맑은고딕', Helvetica, Arial, sans-serif; 
+  color: #333;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+
+/* ////////// header ////////// */
+.header_container {
+
+}
+.header_main {}
+.header_main h1 {}
+.header_main button {}
+.trigger {}
+.gnb {}
+
+
+/* ////////// main visual ////////// */
+.visual {}
+
+
+
+/* ////////// main ////////// */
+.main_container {
+
+}
+.search_wrap {}
+.service_wrap {}
+
+
+/* ////////// facebook(sns) ////////// */
+.sns_wrap {}
+
+
+/* ////////// footer ////////// */
+.footer_wrap {}
+footer {}
