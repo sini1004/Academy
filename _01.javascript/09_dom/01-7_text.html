@@ -24,6 +24,7 @@
     .color1 { background-color: #cf5a8b;}
     .color2 { background-color: #66a7c5;}
     .color3 { background-color: #94c24a;}
+    em { display: none; }
   </style>
 </head>
 <body>
@@ -31,16 +32,33 @@
     <h1><img src="icon.svg" alt=""></h1>
     <h2></h2>
     <ul>
-      <li>비행기</li>
-      <li>자전거</li>
+      <li id="one"><em>대한항공</em>비행기</li>
+      <li id="two">따릉이 자전거</li>
       <li class="color1">기차</li>
-      <li class="color2">버스</li>
+      <li id="four" class="color2">9300번 1001번 버스</li>
       <li>지하철</li>
       <li>자동차</li>
     </ul>
   </div>
 
-  <script></script>
+  <script>
+    const item1 = document.querySelector('#one');
+    const text1 = item1.textContent;
+    //textContent 숨김처리한 텍스트도 가져옴
+    console.log(text1);
+
+    const text2 = item1.innerText;
+    //innerText 화면에 보이는 텍스트만 가져옴
+    console.log(text2);
+
+    const text3 = item1.innerHTML;
+    //innerHTML html태그까지 가져옴
+    console.log(text3);
+
+    const twoT = two.innerText;
+
+    two.innerHTML = `<a href = "https://www.bikeseoul.com/"> ${twoT} </a>`
+  </script>
   
 </body>
 </html>

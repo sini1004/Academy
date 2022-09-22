@@ -21,9 +21,9 @@
       width: 150px;
     }
     h2 { text-align: center; margin-bottom: 50px;}
-    .color1 { background-color: #cf5a8b;}
-    .color2 { background-color: #66a7c5;}
-    .color3 { background-color: #94c24a;}
+    .color1 { background-color: #b14270;}
+    .color2 { background-color: #25576e;}
+    .color3 { background-color: #699424;}
   </style>
 </head>
 <body>
@@ -31,16 +31,23 @@
     <h1><img src="icon.svg" alt=""></h1>
     <h2></h2>
     <ul>
-      <li>비행기</li>
-      <li>자전거</li>
-      <li class="color1">기차</li>
-      <li class="color2">버스</li>
-      <li>지하철</li>
-      <li>자동차</li>
+      <li>비행기</li><li>자전거</li><li id="three">기차</li><li>버스</li><li>지하철</li><li>자동차</li>
     </ul>
   </div>
 
-  <script></script>
+  <script>
+    const elStart = document.getElementById('three');
+
+    const elPrev = elStart.previousSibling;
+    // 기존요소보다 하나 이전 요소 (형제관계중), (브라우저에따라 ) 같은 li끼리 X, Enter도 인식함! 
+
+    const elNext = elStart.nextSibling;
+    //기준요소보다 하나 뒤 요소(형제관계중)
+
+    elPrev.className = 'color1';
+    elNext.classList.add('color2');
+
+  </script>
   
 </body>
 </html>

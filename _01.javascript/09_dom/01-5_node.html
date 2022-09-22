@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM_node</title>  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #545e75;}
+    li { list-style: none; background-color: #82a3a1; margin-bottom: 5px; 
+      color: #fff; line-height: 50px; font-weight: 600;}
+    body > div { 
+      width:400px;
+      margin:200px auto;
+      padding:20px;
+      background: #f2ecd2;
+    }
+    h1 { text-align: center;}
+    h1 img {
+      width: 150px;
+    }
+    h2 { text-align: center; margin-bottom: 50px;}
+    .color1 { background-color: #b14270;}
+    .color2 { background-color: #25576e;}
+    .color3 { background-color: #699424;}
+    .check { background: #fff url(../img/check-mark.png) no-repeat 95% 50% / 25px; color:red}
+    .line { text-decoration: underline overline;}
+    .line1 { text-decoration: underline;}
+    .tt { color:blue; }
+  </style>
+</head>
+<body>
+  <div id="page">
+    <h1><img src="icon.svg" alt=""></h1>
+    <h2>두번째 제목</h2>
+    <ul>
+      <li>비행기</li>
+      <li>자전거</li> <!--주석ㄴㄴㄴㅇㅇㅇ-->
+      <li id="three">기차</li>
+      <li>버스</li>
+      <li>지하철</li>
+      <li>자동차</li>
+    </ul>
+
+    <ul><li
+      >비행기</li
+      ><li>자전거</li
+      ><li id="three" class="sky line">기차</li
+      ><li>버스</li
+      ><li>지하철</li
+      ><li>자동차</li
+      ></ul>
+
+  </div>
+
+  <script>
+    const elStart = document.getElementsByTagName('ul')[1];
+    //getElementsByTagName => 's'항상 배열로 인식 
+
+    const elFirst = elStart.firstChild;
+    const elLast = elStart.lastChild;
+
+    const el3 = elStart.childNodes[3];
+    console.log(el3);
+
+    console.log(elFirst);
+
+    elFirst.classList.add('check');
+    elLast.classList.add('color1');
+
+    el3.classList.add('tt');
+    el3.classList.replace('sky','orange');   
+    // classList.replace('이전클라스','새로바뀔클라스')    
+
+
+    
+
+
+    const elStar2 = document.getElementsByTagName('ul')[0]; //항상 배열로 인식
+    
+    const elChildren = elStar2.children;
+    console.log('children 무엇 ? ',elChildren );
+
+    const elCh3 = elStar2.children[2];
+    console.log('elCh3??', elCh3);
+
+    elCh3.classList.add('check');
+
+    //부모요소.childNodes => 모든 자식노드 선택(엔터, 여백, 주석)
+    //부모요소.children => 자식노드들 중에 엔터 같은 부분 제외하고 선택
+
+    console.log(elStar2);
+    console.log('elStar2의 자식의 갯수는 ? ',elStar2.childNodes.length);
+    console.log('elStar2의 자식의 갯수는 ? ',elStar2.children.length);
+
+  </script>
+  
+</body>
+</html>
+
+

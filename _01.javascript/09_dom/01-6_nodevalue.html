@@ -21,9 +21,9 @@
       width: 150px;
     }
     h2 { text-align: center; margin-bottom: 50px;}
-    .color1 { background-color: #cf5a8b;}
-    .color2 { background-color: #66a7c5;}
-    .color3 { background-color: #94c24a;}
+    .color1 { background-color: #972d59;}
+    .color2 { background-color: #255d77;}
+    .color3 { background-color: #577a1f;}
   </style>
 </head>
 <body>
@@ -32,17 +32,31 @@
     <h2></h2>
     <ul>
       <li>비행기</li>
-      <li>자전거</li>
+      <li id="two" >자전거</li>
       <li class="color1">기차</li>
       <li class="color2">버스</li>
-      <li>지하철</li>
+      <li id="four">7호선 2호선 지하철</li>
       <li>자동차</li>
     </ul>
   </div>
 
-  <script></script>
+  <script>
+    const item1 = document.getElementById('two');
+    let elText1 = item1.nodeValue;
+    //인식 못함 -> 텍스트 요소도 자식노드로 인식
+    let elText2 = item1.firstChild.nodeValue;
+
+    item1.firstChild.nodeValue = elText2.replace('자전','공전');
+
+    let elText3 = four.firstChild.nodeValue;
+    // four.firstChild.nodeValue = elText3.replace('2호선','3호선');
+    four.firstChild.nodeValue = '텍스트 아무거나 입력';
+  
+    console.log(elText1);
+    console.log(elText2);
+  </script>
   
 </body>
-</html>
+</html> 
 
 
