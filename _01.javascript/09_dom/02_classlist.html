@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>classList</title>
+  <style>
+    * { margin: 0; padding: 0; }
+    body {background-color: beige;}
+    h1 { margin-bottom: 20px; }
+    article { margin: 50px 0; text-align: center;}
+    button {padding: 10px 20px; border-radius:10px; background-color: #fff; border: 0; cursor: pointer;}
+  </style>
+</head>
+<body>
+  <article class="c01">
+    <h1>class toggle</h1>
+    <button>팝업버튼</button>
+    <div>
+      <p>레이어 팝업입니다!!</p>
+    </div>
+    <style>
+      .c01 > div { display:none; justify-content: center; align-items: center; width: 500px; height: 200px; background-color: rgba(51, 51, 51, .7); 
+        border-radius: 25px; font-size: 18px; color: #fff; position: fixed;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);}
+      .c01.active > div { display: flex;}
+    </style>
+
+    <script>
+      const elC01 = document.querySelector('.c01');
+      const elBtn = document.querySelector('.c01 button');
+
+      let aa = 0; //시작할때 변수 aa에 0이 들어간다.
+
+      // elBtn.onclick = function(){
+      //   if(aa == 0){
+      //     elC01.classList.add('active');
+      //     console.log('클릭');
+      //     aa = 10;
+      //   }else{
+      //     elC01.classList.remove('active');
+      //     aa = 0;
+      //   }
+      // }
+
+      // elBtn.onclick = function(){
+      //   elC01.classList.toggle('active');
+      // }
+      
+
+      elBtn.onclick = () => {
+        elC01.classList.toggle('active');
+      }
+
+      // elBtn.addEventListener('click', () => {
+      //   elC01.classList.toggle('active')
+      // });
+    </script>
+
+  </article>
+
+  <article class="c02">
+    <h1>classList 정리</h1>
+    <div>
+      A.classList.add( 클래스명) // 클래스 추가
+      A.classList.remove( 클래스명) // 클래스 삭제
+      A.classList.toggle( 클래스명) // 클래스 추가, 삭제 반복
+      A.classList.contain( 클래스명) // 클래스 존재 유무에 따라 true/false 반환
+
+      //한개의 클래스만 제어(프로퍼티)
+      A.className //클래스의 이름을 가져옴
+      A.className = B //A의 클래스를 B로 변경, 추가
+    </div>
+
+    <style>
+      .c02 > div { display: none; white-space: pre-line; background-color: bisque; padding: 30px 0;}
+      .c02.active > div {display: block;}
+    </style>
+
+    <script>
+      const elC02 = document.querySelector('.c02');
+      const elBtn2 = document.querySelector('.c02 h1');
+
+      let list = 0;
+
+      elC02.onmouseover = function(){
+        elC02.classList.add('active');
+      }
+
+      elC02.onmouseout = function(){
+        elC02.classList.remove('active');
+      }
+    </script>
+
+  </article>
+
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM(Document Object Model)</title>  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #545e75;}
+    li { list-style: none; background-color: #82a3a1; margin-bottom: 5px; 
+      color: #fff; line-height: 50px; font-weight: 600;}
+    body > div { 
+      width:400px;
+      margin:200px auto;
+      padding:20px;
+      background: #f2ecd2;
+    }
+    h1 { text-align: center;}
+    h1 img {
+      width: 150px;
+    }
+    h2 { text-align: center; margin-bottom: 50px;}
+    .color1 { background-color: #8d2c55;}
+    .color2 { background-color: #255d77;}
+    .color3 { background-color: #5c7e25;}
+  </style>
+</head>
+<body>
+  <div id="page">
+    <h1><img src="icon.svg" alt=""></h1>
+    <h2>DOM요소 제거, 추가</h2>
+    <ul>
+      <li>1 - 비행기</li>
+      <li>2 - 자전거</li>
+      <li>3 - 기차</li>
+      <li>4 - 버스</li>
+      <li>5 - 지하철</li>
+      <li>6 - 자동차</li>
+    </ul>
+  </div>
+
+  <script>
+    const parentEl = document.getElementsByTagName('ul')[0];
+    const removeEl = document.getElementsByTagName('li')[2];
+
+    parentEl.removeChild(removeEl);
+
+    const newEl = document.createElement('li'); //문서객체 (html tag) 생성
+    const newText = document.createTextNode('출발지역');
+
+    // console.log(newText);
+
+    newEl.appendChild(newText);
+    console.log(newEl);
+    //A.appendChild(B) => 노드A에 노드B를 삽입해서 자식요소를 만든다.
+
+    parentEl.appendChild(newEl);
+    parentEl.append('도착지역'); 
+    parentEl.prepend('소요시간'); 
+    parentEl.after('지역'); 
+    parentEl.before('얼마인가요'); 
+    //A.append(B) => A요소의 내부 끝 부분에 삽입.
+    //A.prepend(B) => A요소의 내부 시작 부분에 삽입.
+    //A.after(B) => A요소의 뒤에 B 삽입.
+    //A.before(B) => A요소의 앞에 B 삽입.
+
+    
+  </script>
+  
+</body>
+</html>
+
+

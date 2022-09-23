@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DOM(Document Object Model)</title>  
+  <title>attribute(속성)검사</title>  
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: #545e75;}
@@ -24,24 +24,43 @@
     .color1 { background-color: #8d2c55;}
     .color2 { background-color: #255d77;}
     .color3 { background-color: #5c7e25;}
+    #result {background-color: #fff; color: #000; margin-top: 30px; padding: 25px 0;}
   </style>
 </head>
 <body>
   <div id="page">
     <h1><img src="icon.svg" alt=""></h1>
-    <h2></h2>
+    <h2>attribute(속성) 검사</h2>
     <ul>
-      <li>비행기</li>
+      <li id="one" class="airport">비행기</li>
       <li>자전거</li>
-      <li class="color1">기차</li>
-      <li class="color2">버스</li>
+      <li>기차</li>
+      <li id="four">버스</li>
       <li>지하철</li>
       <li>자동차</li>
     </ul>
+    <div id="result"> </div>
   </div>
 
   <script>
-    
+    const item1 = document.getElementById('one');
+    const pos = document.getElementById('result');
+
+    if(item1.hasAttribute('class')){
+      const attr1 = item1.getAttribute('class');
+      console.log('??', attr1);
+      pos.innerHTML = `<p>첫번째 아이템의 클라스 이름은? <br/>
+        ${attr1}입니다.</p>`
+    };
+
+
+  /*
+    A.hasAttribute(B)   -A요소에 B속성을 갖고 있는지 체크 
+    A.getAttribute(B)   -A요소에 있는 B속성의 속성값을 반환 
+    A.setAttribute(name,value)   -A요소에 속성과 속성값을 대입(만들어준다)
+  */
+
+
   </script>
   
 </body>

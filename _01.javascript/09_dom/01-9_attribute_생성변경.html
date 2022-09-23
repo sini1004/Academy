@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>attribute(속성)생성,변경</title>  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #545e75;}
+    li { list-style: none; background-color: #82a3a1; margin-bottom: 5px; 
+      color: #fff; line-height: 50px; font-weight: 600;}
+    body > div { 
+      width:400px;
+      margin:200px auto;
+      padding:20px;
+      background: #f2ecd2;
+    }
+    h1 { text-align: center;}
+    h1 img {
+      width: 150px;
+    }
+    h2 { text-align: center; margin-bottom: 50px;}
+    .color1 { background-color: #8d2c55;}
+    .color2 { background-color: #255d77;}
+    .color3 { background-color: #5c7e25;}
+    #result {background-color: #fff; color: #000; margin-top: 30px; padding: 25px 0;}
+    .check { background: #fff url(../img/check-mark.png) no-repeat 95% 50% / 25px; color:red}
+    .line { text-decoration: underline overline;}
+    .red { background-color: rgb(189, 0, 0);}
+  </style>
+</head>
+<body>
+  <div id="page">
+    <h1><img src="icon.svg" alt=""></h1>
+    <h2>attribute(속성)생성,변경</h2>
+    <ul>
+      <li id="one" class="airport">비행기</li>
+      <li>자전거</li>
+      <li id="three"><a>KTX</a>기차</li>
+      <li id="four" class="red">버스</li>
+      <li>지하철</li>
+      <li>자동차</li>
+    </ul>
+    <div id="result"> </div>
+  </div>
+
+  <script>
+    const item1 = document.getElementById('one');
+    const pos = document.getElementById('result');
+
+    item1.classList.add('line'); //클라스 추가
+    item1.classList.replace('airport', 'check');
+    
+    const item2 = document.querySelector('#three a');
+    item2.setAttribute('href', 'https://www.naver.com/')
+
+    const item3 = document.querySelectorAll('li').item(1);
+    item3.setAttribute('class','color3');
+    console.log(item3);
+
+    const item4 = document.querySelectorAll('li').item(3);
+    item4.removeAttribute('class','red');
+    console.log(item4);
+
+    const item5 = document.querySelector('#page > div');
+    console.log(item5);
+    if (item5.hasAttribute('class')){
+      item5.removeAttribute('id');
+    } else {
+      pos.innerHTML = 'class는 없어요';
+    }
+
+  /*
+    A.hasAttribute(B)   -A요소에 B속성을 갖고 있는지 체크 
+    A.getAttribute(B)   -A요소에 있는 B속성의 속성값을 반환  
+    A.setAttribute(name, value)   -A요소에 속성과 속성값을 대입(만들어 준다) 
+    A.removeAttribute(B)      -A요소에 있는 B속성을 제거   
+  */
+
+  </script>
+  
+</body>
+</html>
+
+
