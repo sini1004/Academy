@@ -184,11 +184,32 @@
           elNav.classList.remove('active');
         }
       };
-
-
     </script>
   </article>
 
+  <article class="c05">
+    <h1>classList add/remove</h1>
+    <div>
+      <button>JavaScript</button>
+      <button>React</button>
+      <button>Bootstrap</button>
+    </div>
+    <style>
+      .c05 { width: 100%;}
+      .c05 div { width: 70%; margin: 0 auto; display: flex; justify-content: space-between;}
+      .c05 button { width: 30%;}
+      .c05 button.active { background-color: #d34e76; color: #fff;}
+    </style>
+    <script>      
+      const elBtn5 = document.querySelectorAll('.c05 button');
+
+      elBtn5.forEach(function(bb){
+        bb.onclick = function(){
+          this.classList.toggle('active');
+        }
+      });
+    </script>
+  </article>
 
 </body>
 </html>
