@@ -188,7 +188,7 @@
   </article>
 
   <article class="c05">
-    <h1>classList add/remove</h1>
+    <h1>ClassList add/remove</h1>
     <div>
       <button>JavaScript</button>
       <button>React</button>
@@ -202,10 +202,57 @@
     </style>
     <script>      
       const elBtn5 = document.querySelectorAll('.c05 button');
+      let num = 0;
 
-      elBtn5.forEach(function(bb){
+      elBtn5.forEach(function(bb,cc){
         bb.onclick = function(){
-          this.classList.toggle('active');
+          elBtn5[num].classList.remove('active');
+          this.classList.add('active');
+          num = cc;
+          // console.log(bb,cc,elBtn5);
+        }
+      });
+      /*
+      배열에 활용. 배열값(아이템) 각각에 실행
+        배열명.forEach(function(배열아이템,index(순서)){
+          실행문....
+        })
+      */
+    </script>
+  </article>
+
+  <article class="c06">
+    <h1>ClassList add/remove</h1>
+    <div>
+      <figure class="view">
+        <img src="img/pic1.jpg" alt="">
+      </figure>
+      <figure class="list">
+        <img src="img/pic1.jpg" alt="" class="active">
+        <img src="img/pic2.jpg" alt="">
+        <img src="img/pic3.jpg" alt="">
+        <img src="img/pic4.jpg" alt="">
+      </figure>
+    </div>
+    <style>
+      .c06 { width: 100%; margin: 0 auto; }
+      .c06 .view img { width: 60%; }
+      .c06 .list img { width: 13%; }
+      .c06 .list img.active { border: 2px solid #d34e76; }
+    </style>
+    <script>
+      const elView = document.querySelector('.view img');
+      const elBtn6 = document.querySelectorAll('.list img');
+      let num2 = 0;
+
+      
+      elBtn6.forEach(function(img, index){
+        img.onclick = function(){
+          elBtn6[num2].classList.remove('active');
+          this.classList.add('active');
+          num2 = index;
+
+          elView.src = this.src;
         }
       });
     </script>
