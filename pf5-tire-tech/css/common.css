@@ -25,11 +25,14 @@ header {
   width: 1092px;
   margin: 0 auto;
 }
+header h1 {
+  float: left;
+  margin-top:20px;
+}
 .header_main {}
 .header_main h1 {
   float: left;
   margin-top: 20px;
-  margin-left: -20px;
 }
 .header_main h1 a {
   display: block;
@@ -65,9 +68,11 @@ ul.navbar_gnb {
 
 
 .sub {
+  display: none;
   position:absolute; 
   top:70px;
   z-index:200;
+  margin-left: 10px;
 }
 .sub a {
   display:block;
@@ -93,11 +98,11 @@ ul.navbar_gnb {
 
 @media (max-width:1169px){ 
   header {
+    position: relative;
     width:auto; margin:0 10px;
   } 
   header h1 {
     margin-left:10px;
-
   }
   .trigger { 
     position:relative;
@@ -128,9 +133,13 @@ ul.navbar_gnb {
   .trigger .icon_bar:nth-child(3){
     bottom: 4px;
   }
-  .trigger.open {
-  
-  }
+
+.trigger.open {}
+.trigger.open .icon_bar:nth-child(1){ transform:rotate(45deg); margin-top:6px; }
+.trigger.open .icon_bar:nth-child(2){ width:0; }
+.trigger.open .icon_bar:nth-child(3){ transform:rotate(-45deg); margin-bottom:6px;}
+
+
   .trigger.open .icon_bar:nth-child(1){
     transform: rotate(45deg);
     margin-top: 6px;
@@ -146,7 +155,7 @@ ul.navbar_gnb {
   .gnb { 
     position: fixed;
     top:0;
-    right: 0;
+    right: -250px;
     bottom: 0;
     width: 250px;
     background-color: #333;
@@ -183,6 +192,7 @@ ul.navbar_gnb {
     right: 10px;
     width: 14px;
     height: 14px;
+    cursor: pointer;
   }
   .icon::before, .icon::after {
     content: '';
@@ -198,6 +208,23 @@ ul.navbar_gnb {
   }
   .icon::after {
     transform: rotate(90deg);
+  }
+  .sub_shadow {
+    display: none;
+  }
+  .navbar_gnb > li.on {}
+  .navbar_gnb > li.on > a {
+    color: #dd7add;
+  }
+  .navbar_gnb > li.on .icon { 
+    transform:rotate(90deg);
+  }
+  .navbar_gnb > li.on .icon::before {
+    transform:rotate(90deg);
+  }
+  .navbar_gnb > li.on .icon::after { 
+    background:#dd7add;
+    transform:rotate(90deg);
   }
   
 }
