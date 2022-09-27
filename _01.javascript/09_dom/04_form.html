@@ -12,12 +12,16 @@
     h2 { padding: 20px 0;}
     input[type="text"] { height: 30px; border: 1px solid #ccc; border-radius: 7px; background-color: #f8f8f8;}
     input[type="text"]:focus { border: 1px solid rgb(177, 177, 177); outline: none;}
-    button { height: 32px; padding: 0 10px; vertical-align: middle; background-color: #f8f8f8; border-radius: 7px; border: 1px solid #ccc;}
+    button, input[type='submit']{ height: 32px; padding: 0 10px; vertical-align: middle; background-color: #f8f8f8; border-radius: 7px; border: 1px solid #ccc;}
     
     .form1 li { border-bottom: 1px solid #f0f0f0;}
 
     .form2 div{ margin-bottom: 30px;}
     .form2 p { height: 100px; overflow: auto; padding: 10px; font-size:13px; background:#f0f0f0; border:1px solid #ccc; }
+    
+    .form3 { text-align: center;}
+    .form3 span { display: inline-block; width: 70px;}
+    .form3 #result { border-top: 1px solid #ccc; padding-top: 10px; color: #be0000; font-weight: bold;}
   </style>
 </head>
 <body>
@@ -116,6 +120,32 @@
     </script>
   </article> <!-- //////////////////// 02.article //////////////////// -->
 
+
+  <article class="form3">
+    <h2>가격 총 금액</h2>
+    <form action="">
+      <ul>
+        <li><span>신발</span> <input type="text" id="shoes"></li>
+        <li><span>옷</span> <input type="text" id="cloth"></li>
+        <li><input type="submit" value="총 금액"></li>
+      </ul>
+    </form>
+    <div id="result">총 금액 출력</div>
+    <script>
+      window.onsubmit = function(e){
+        e.preventDefault();
+        console.log('작동');
+
+        let total = Number(shoes.value) + Number(cloth.value);
+        console.log(total);
+        
+        result.innerText = `${total}원`;
+      }
+      /*
+        type = "submit" - default로 버튼 역할을 하게 정해져 있다. .onsubmit
+      */
+    </script>
+  </article>  <!-- //////////////////// 03.article //////////////////// -->
 
 </body>
 </html>
