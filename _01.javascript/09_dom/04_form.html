@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORM</title>
+  <style>    
+    * { margin: 0; padding: 0; }
+    li { list-style: none; padding: 10px;}
+    article { width: 60%; margin: 50px auto;}
+    h2 { padding: 20px 0;}
+    input { height: 30px; border: 1px solid #ccc; border-radius: 7px; background-color: #f8f8f8;}
+    input:focus { border: 1px solid rgb(177, 177, 177); outline: none;}
+    button { height: 32px; padding: 0 10px; vertical-align: middle; background-color: #f8f8f8; border-radius: 7px; border: 1px solid #ccc;}
+  </style>
+</head>
+<body>
+  <article class="form1">
+    <h2>출석체크</h2>
+    <div>
+      <input type="text">
+      <button>저장</button>
+    </div>
+    <ul></ul>
+    <script>
+      const inputForm1 = document.querySelector('.form1 input');
+      const btnForm1 = document.querySelector('.form1 button');
+      const ulForm1 = document.querySelector('.form1 ul');
+    </script>
+  </article>
+</body>
+</html>
