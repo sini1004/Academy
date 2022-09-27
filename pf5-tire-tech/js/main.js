@@ -48,6 +48,14 @@ $('.trigger').click(function(){
   }
 });
 
+//모바일 상태에서 서브메뉴를 열고 데스크탑상태로 바꾸면 서브가 그냥 보이는 상태-수정
+$(window).resize(function(){
+  if($(window).width() > 1169){
+    $('.sub').removeAttr('style');
+    $('.navbar_gnb > li').removeClass('on');
+  }
+})
+
 /*
   mouseenter/mouseleave  - 자식 요소가 있다면 해당 자식요소 영역은 제외
   mouseover/mouseout    - 자식 요소가 있다면 해당 자식요소까지 포함
