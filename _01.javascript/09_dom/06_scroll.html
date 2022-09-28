@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll</title>
+  <style>
+    * { margin:0; padding:0; box-sizing: border-box;}
+    header { position:fixed; top:0; left:0; width:100%; background:rgba(0,0,0,0.8); text-align:center; transition: .5s;}
+    header.scr { transform: translateY(-70px);  }
+    header span { color: red; font-weight: bold;}
+    header h2 { line-height: 70px; border: 1px solid rgb(228, 228, 228);}
+    header div { line-height: 50px; color: #fff;}
+    section {}
+    section div { height:500px; background:#ffdfdf; font-size: 5em; display: flex; justify-content: center; align-items: center; }
+    section div:nth-child(even) { background: #dfe2ff; }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>scroll</h2>
+    <div>scroll값</div>
+    <script>
+      const elHeader = document.querySelector('header');
+      const elheaderDiv = document.querySelector('header div');
+
+      let pos = { y:0, oy:0, status:true }
+
+      window.onscroll = function(){
+        pos.y = window.scrollY; //현재 스크롤값
+        pos.status = pos.y > pos.oy;  //true일때는 아래로 스크롤 되고 있다는 의미
+        pos.oy = pos.y;  //이전 스크롤값
+          
+        elheaderDiv.innerHTML = ` 
+        스크롤 현재값 <span>${pos.y}</span> /
+        스크롤이 아래로 되는 중?  <span>${pos.status}</span> /
+        스크롤 전체 길이 <span>${document.scrollingElement.scrollHeight}</span> / 
+        브라우저의 너비  <span>${window.innerWidth}</span>  
+        `
+
+        if(pos.status){ //pos.y>70
+          elHeader.classList.add('scr');
+        } else {
+          elHeader.classList.remove('scr');
+        }
+
+      }
+
+      /*
+        window.innerWidth - 뷰포트너비, 안쪽여백, 스크롤바 포함
+      */
+    </script>
+  </header>
+  <section>
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+    <div>04</div>
+    <div>05</div>
+  </section>
+</body>
+</html>

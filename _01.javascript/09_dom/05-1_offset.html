@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>offset menubar</title>
+  <style>
+    * { margin:0; padding:0; box-sizing: border-box;}
+    header { position: fixed; top:0; left:0; width: 100%; height: 100px; background-color: #343436; text-align: center;}
+    .header_in { }
+    ul.nav { position: relative; display:inline-block; }
+    .nav li { float:left; list-style:none; margin:0 22px;}
+    .nav a { display:block; line-height:100px; color: #fff; text-decoration:none;     }
+    .bar { position:absolute; left:0; top:70px;  width:0; height:3px; background-color: #BE161E; transition: .5s ease-out;}
+    .s1 { background-color: antiquewhite; height: 400px;}
+    .s2 { background-color: #d6b17f; height: 400px;}
+    .s3 { background-color: #daa158; height: 400px;}
+  </style>
+</head>
+<body>
+  <header class="header_in">
+    <ul class="nav">
+      <li><a href="#">BRAND</a></li>
+      <li><a href="#">MENU</a></li>
+      <li><a href="#">MEMBERSHIP</a></li>
+      <li><a href="#">BENEFIT</a></li>
+      <li><a href="#">ACADEMY</a></li>
+      <li><a href="#">STORE</a></li>
+      <span class="bar"></span>
+    </ul>
+  </header>
+  <section class="s1"> </section>
+  <section class="s2"> </section>
+  <section class="s3"> </section>
+
+  <script>
+    const elMenu = document.querySelectorAll('.nav a');
+    const elBar = document.querySelector('.bar');
+
+    elMenu.forEach(function(item){
+      item.onmouseover = function(){
+        elBar.style = `width:${this.offsetWidth}px; left:${this.offsetLeft}px;`; 
+      }
+      item.onmouseout = function(){
+        elBar.style = `width:0px; left:${this.offsetLeft}px;`;
+      }
+    });
+  </script>
+</body>
+</html>
