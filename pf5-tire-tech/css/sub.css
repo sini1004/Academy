@@ -132,3 +132,59 @@
 
 
 
+
+/***** 서브페이지- 상품안내 product5******/
+
+.guarantee_container .guarantee-items { 
+  margin-top: 40px; 
+  margin: 40px -21px; 
+  overflow: hidden;
+}
+.guarantee_container .guarantee-items .guarantee-item {
+  min-height: 280px;
+  float: left;
+  width: 506px;
+  margin: 0 20px;
+  max-width: 100%;
+  position: relative;
+}
+.guarantee_container .guarantee-items .guarantee-item .more-btn {
+  float: right;
+  margin-top: 10px;
+}
+.guarantee_container .guarantee-items .guarantee-item h4 {
+  margin-bottom: 10px;
+}
+.guarantee_container .guarantee-items .guarantee-item p {
+  font-size: 13px;
+  margin-top: 10px;
+}
+.guarantee_container .guarantee-items .guarantee-item .title-line {
+  margin-top: 0;
+}
+.title-line {
+  text-align: left;
+  font-size: 22px;
+  font-weight: 400;
+  color: #231f20;
+  background: url(../img/sub/icon_step_top.gif) left top no-repeat;
+  padding: 10px 0 0 0;
+  line-height: 1; 
+}
+
+
+@media (max-width:1169px){
+  .guarantee_container .guarantee-items {
+    margin: 50px auto;
+  }
+  .guarantee_container .guarantee-items .guarantee-item {
+    min-height: auto;
+    width: 100%;
+    float: none;
+    margin: 0;
+    margin-bottom: 30px;
+  } 
+  .guarantee_container .guarantee-items .guarantee-item .guarantee-img img {
+    width: 100%;
+  }
+}
