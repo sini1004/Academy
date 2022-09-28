@@ -1,13 +1,5 @@
 @charset "UTF-8";
 
-body {
-  font-family: 'Noto Sans KR', '맑은고딕', Helvetica, Arial, sans-serif; 
-  color: #333;
-  font-size: 14px;
-  line-height: 1.45;
-}
-
-
 /* ////////// main ////////// */
 .main_container {
 
