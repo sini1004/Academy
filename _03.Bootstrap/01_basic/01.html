@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 기초</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.min.js"></script>
+  <style>
+    #w_num { display: inline-block; }
+    header span { margin-left: 30px; }
+    body > div { margin-top: 100px 0; border: 1px solid green;}
+    body > div > div  { border: 3px solid saddlebrown; margin-bottom: 20px;}
+    body > div > div > div { border: 1px solid orange; height: 100px; background: salmon;}
+  </style>
+</head>
+<body>
+  <header class="bg-light text-center py-2 fixed-top bg-opacity-75">
+    <p id = "w_num" class="border bg-white fs-3">가로너비</p>
+    <span><strong>sm</strong> &lt;576px </span>
+    <span><strong>md</strong> ≥768px </span>
+    <span><strong>lg</strong> ≥992px </span>
+    <span><strong>xl</strong> ≥1200px </span>
+    <span><strong>xxl</strong> ≥1400px </span>
+  </header>
+
+  <div class="container">
+    내용 들어가는 곳!<br/>
+    내용 들어가는 곳!<br/>
+    내용 들어가는 곳!<br/>
+    내용 들어가는 곳!<br/>
+    내용 들어가는 곳!<br/>
+    내용 들어가는 곳!<br/>
+  </div>
+
+  <div class="container-xl">
+    <div class="row">
+      <div class="col">sdsdsdsd</div>
+      <div class="col">sdsd</div>
+      <div class="col">sdsd</div>
+    </div>
+    <div class="row">
+      <div class="col">col-2</div>
+      <div class="col-8">col-8</div>
+      <div class="col">col-2</div>
+    </div>
+    <div class="row">
+      <div class="col-5">col-5</div>
+      <div class="col-2">2col-2</div>
+      <div class="col-5">col-5</div>
+      <div class="col">3개의 column의 합이 12가 되면 두에 나온 col은 알아서 줄 바뀜</div>
+    </div>
+    <div class="row row-cols-2"> <!-- row-cols-2 : 한 줄에 두개 넣기 -->
+      <div class="col">col</div>
+      <div class="col">col</div>
+      <div class="col">col</div>
+      <div class="col">col</div>
+    </div>
+    <div class="row row-cols-6"> <!-- row-cols-6 : 한 줄에 여섯개 넣기 -->
+      <div class="col">col</div>
+      <div class="col">col</div>
+      <div class="col">col</div>
+      <div class="col">col</div>
+    </div>
+    <div class="row justify-content-center"> 
+      <div class="col-2">2col</div>
+      <div class="col-auto">내용이 들어갑니다,,,,,,,,,,,</div> <!-- col-auto : 내용만큼 자리를 column이 잡아줌. -->
+      <div class="col-2">2col</div>
+    </div>
+    <div class="row col-auto justify-content-end"> 
+      <div class="col-2">2col</div>
+      <div class="col-auto">justify-content-end</div> <!-- col-auto : 내용만큼 자리를 column이 잡아줌. -->
+      <div class="col-2">2col</div>
+    </div>
+    <div class="row col-auto justify-content-evenly"> 
+      <div class="col-2">2col</div>
+      <div class="col-auto">justify-content-evenly</div> <!-- col-auto : 내용만큼 자리를 column이 잡아줌. -->
+      <div class="col-2">2col</div>
+      <div class="col-2">2col</div>
+    </div>
+  </div>
+
+
+  <footer class="bg-dark bg-gradient py-3">
+    <p class="container-lg text-white">이 사이트는 부트스트랩 연습용 사이트 입니다.</p>
+  </footer>
+
+
+  <script>
+    function winWidth(){
+      let ww = window.innerWidth;
+      w_num.innerText = ww;
+    }
+    winWidth();
+    window.addEventListener('resize', winWidth);
+  </script>
+</body>
+</html>
