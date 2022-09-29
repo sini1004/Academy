@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event</title>  
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box;}
+    body { background: #faeeab;}
+    body > div { 
+      width:450px;
+      margin:150px auto;
+      padding:2px;
+      background: #fffbd5;      
+    }
+    h1 { text-align:center; }
+    h2 { text-align:center; color:#9e7f03; margin-bottom:30px; }
+    h1 img { width:200px; }
+
+    form { padding:0 50px 20px; overflow: hidden;}
+    label { }
+    select { width:180px; padding:1px; font-size:20px; text-align:center;}    
+    .packageHint, .termsHint { padding-left: 25px; margin:20px 0 30px;     }
+    .packageHint { background:url('../img/event_hint.png') no-repeat;}
+    .termsHint { background:url('../img/event_hint.png') no-repeat;}
+
+    input[type="submit"] {
+        float:right; background:#f87823; color:#fff;
+        padding:10px; margin-top:20px;
+        border:0; border-radius:5px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover{
+        background:#f82323; transform:translate(2px, 2px);
+      }
+        
+  </style>
+</head>
+<body>
+  <div id="page">
+    <h1><img src="icon.svg" alt=""></h1>
+    <h2>MEMBERSHIP</h2>
+    <form action="" id="formSignup">
+      <label for="package">패키지를 선택하세요 : </label>
+      <select id="package">
+        <option> ==== 선택 ====</option>
+        <option value="annual">1년 (30,000원)</option>
+        <option value="monthly">1달 (5,000원)</option>
+      </select>
+      <div class="packageHint"></div>
+
+      <input type="checkbox" id="terms">
+      <label for="terms">사용권 계약에 동의합니다</label>
+      <div class="termsHint"></div>
+
+      <input type="submit" value="다음 단계">
+
+    </form>
+  </div>
+
+<script>
+  const elForm = document.querySelector('#formSignup');
+  const elPackage = document.querySelector('#package');
+  const elpackageHint = document.querySelector('.packageHint');
+  const elterms = document.querySelector('#terms');
+  const eltermsHint = document.querySelector('.termsHint');
+
+  function pHint(){
+    let sel = elPackage.options[elPackage.selectedIndex].value; //선택한 option의 value값을 변수로
+    
+    if(sel == 'annual'){
+      elpackageHint.textContent = '탁월한 선택입니다.'
+    }else if(sel == 'monthly'){
+      elpackageHint.textContent = '1년 패키지를 선택하시면 3만원을 절약하실 수 있습니다.'
+    } else {
+      elpackageHint.textContent = '';
+    }
+  }
+  
+  function checkTerms(event){
+    event.preventDefault();
+    if(!elterms.checked){
+      eltermsHint.textContent = '계약동의에 체크해주세요.';
+    }else{
+      eltermsHint.textContent = '';
+    }
+  }
+
+  elPackage.addEventListener('change', pHint);
+  elForm.addEventListener('submit', checkTerms);
+
+</script>
+
+</body>
+</html>
+

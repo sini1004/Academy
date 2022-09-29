@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventListner - popup</title>  
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box;}
+    body { background: #E29E9A;}
+    #page { 
+      width:400px;
+      margin:150px auto;
+      padding:2px;
+      background: #e7d9d9;      
+    }
+    h1 { text-align:center; }
+    h2 { text-align:center; color:#a779a4; margin-bottom:30px; }
+    h1 img { width:200px; }
+
+    form { padding:0 50px 20px; overflow: hidden;}
+    label { 
+      display:block; 
+      color:#000; font-size:20px; 
+      padding:20px 0 5px }
+
+      input[type="text"],  
+      input[type="password"]  { 
+        width:100%; padding:10px;
+        font-size:18px;  
+        border-radius:5px;  border:none;
+      }
+      input[type="text"]:focus,  
+      input[type="password"]:focus { outline:none; }
+    
+      input[type="submit"] {
+        float:right; background:#f87823; color:#fff;
+        padding:10px; margin-top:20px;
+        border:0; border-radius:5px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover{
+        background:#f82323; transform:translate(2px, 2px);
+      }
+    
+      #feedbackWrap { height:30px; }
+      #feedback { background:url('../img/event_alarm.png') no-repeat; padding-left: 30px; }
+
+      #popup { 
+        position:fixed; top:0; left:0; width:100%; height:100%;
+        display:flex; justify-content:center; align-items:center;
+        background:rgba(0,0,0,.7);
+      }
+      #popup .txt { position: relative;
+        width:600px; height:250px; padding:50px;
+        background:rgba(255,255,255,.9); border:5px solid #f82323 }
+      #popup .txt h2 { color:#f82323}
+      #popup .txt p { text-align:center;}
+      #popup .close { 
+        position:absolute; right:0; bottom:-30px;
+        color:#fff; 
+      }    
+  </style>
+</head>
+<body>
+  <div id="page">
+    <h1><img src="icon.svg" alt=""></h1>
+    <h2>EventListner_매개변수 추가</h2>
+    <form action="">
+      <div id="feedbackWrap">
+        <div id="feedback"></div>
+      </div>
+      <label for="username">사용자 이름 :</label>
+      <input type="text" id="username">
+
+      <label for="pw">비밀번호 :</label>
+      <input type="password" id="pw">
+
+      <input type="submit" value="LOG IN">
+    </form>
+  </div>
+
+  <div id="popup">
+    <div class="txt">
+      <h2>정기점검 중입니다</h2>
+      <p>오후 11:00 ~ 다음날 오전 05:30까지 서버점검이 있습니다<br>이 시간 동안에는 서비스 이용이 불가합니다</p>
+      <a href="#" class="close">닫기</a>
+    </div>
+  </div>
+
+<script>
+  const elPopup = document.querySelector('#popup');   
+
+  function delPopup(){
+    document.body.removeChild(elPopup) ;
+  }
+
+  const elCloseBtn = document.getElementsByClassName('close')[0];
+  elCloseBtn.addEventListener('click',delPopup);
+
+</script>
+</body>
+</html>
+

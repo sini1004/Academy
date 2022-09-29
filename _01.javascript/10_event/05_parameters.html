@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Event</title>  
+  <title>html EventHandler</title>  
   <style>
     * { margin:0; padding:0; }
     body { background: #faeeab;}
@@ -30,7 +30,7 @@
       }
     
     #feedbackWrap { height:30px}
-    #feedback { background:url('../img/event_warning.png')no-repeat; padding-left: 30px; }
+    #feedback { background:url('../img/event_warning.png')no-repeat; padding-left: 30px;}
     
     
   </style>
@@ -38,13 +38,12 @@
 <body>
   <div id="page">
     <h1><img src="icon.svg" alt=""></h1>
-    <h2>두번째 제목</h2>
+    <h2>EventListner 매개변수 추가</h2>
     <form action="">
       <div id="feedbackWrap">
-        <div id="feedback">피드백이 들어가는 부분</div>
+        <div id="feedback"></div>
       </div>
-
-      <label for="username">사용자 이름 : </label>
+      <label for="username">사용자 이름 :</label>
       <input type="text" id="username">
 
       <label for="pw">비밀번호 :</label>
@@ -54,7 +53,19 @@
     </form>
   </div>
 <script>
+  const elName = document.getElementById('username');
+  const elMsg = document.getElementById('feedback');
+  let myName;
 
+  function checkN(myName, minLength){        
+    myName = elName.value;
+
+    if(elName.value.length < minLength)  //요소.입력내용.글자수
+      elMsg.textContent = `${maName}님 이름은 ${minLength}글자 이상 써주세요.`
+  }
+
+  elName.addEventListener('blur', function(){checkN(myName, 7)});
+  //함수에 매개변수가 있을때는 직접()를 쓸 수가 없어서 function(){함수명()} : 이용
 </script>
 </body>
 </html>

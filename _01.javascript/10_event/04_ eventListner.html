@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Event</title>  
+  <title>html EventHandler</title>  
   <style>
     * { margin:0; padding:0; }
     body { background: #faeeab;}
@@ -30,7 +30,7 @@
       }
     
     #feedbackWrap { height:30px}
-    #feedback { background:url('../img/event_warning.png')no-repeat; padding-left: 30px; }
+    #feedback { background:url('../img/event_warning.png')no-repeat; padding-left: 30px;}
     
     
   </style>
@@ -38,13 +38,12 @@
 <body>
   <div id="page">
     <h1><img src="icon.svg" alt=""></h1>
-    <h2>두번째 제목</h2>
+    <h2>EventListner</h2>
     <form action="">
       <div id="feedbackWrap">
-        <div id="feedback">피드백이 들어가는 부분</div>
+        <div id="feedback"></div>
       </div>
-
-      <label for="username">사용자 이름 : </label>
+      <label for="username">사용자 이름 :</label>
       <input type="text" id="username">
 
       <label for="pw">비밀번호 :</label>
@@ -54,6 +53,23 @@
     </form>
   </div>
 <script>
+function checkN(){        
+  const elMsg = document.getElementById('feedback');
+
+  if(elName.value.length < 5)  //요소.입력내용.글자수
+    elMsg.textContent = '이름은 5글자 이상 써주세요!'
+}
+
+const elName = document.getElementById('username');
+// elName.addEventListener('blur',checkN, false);
+// 요소.addEventListener('이벤트', 함수, 이벤트방식)
+  // => 인터넷익스플로어 9버전 이상에서 적용 (이벤트방식 보통은 생략)
+
+  if(elName.addEventListener){
+    elName.addEventListener('blur', checkN);  
+  }else{ //이벤트 리스너를 인식하지 못할때 대용으로 사용
+    elName.attachEvent('onblur', checkN);
+  }
 
 </script>
 </body>
