@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>scroll</title>
+  <style>
+    * { 
+      margin:0; padding:0;
+      box-sizing:border-box; }
+    #stats { 
+      position:fixed; top:0; left:0; width:100%;
+      background:rgba(0,0,0,0.8);
+      text-align:center; padding:20px 0;
+      transition:0.5s; color:#fff; }
+    #stats span { display:inline-block; width:70px; background:#eeeeee; 
+      color:red; font-size:24px; border-radius:5px;
+    margin-right:20px; text-align:center; }
+
+    section {}
+    section div { 
+      height:500px; background:#fffedf;
+      font-size:5em; 
+      display:flex; justify-content:center; align-items:center;
+    }
+    section div:nth-child(even) { background:#e4dfff; }
+
+  </style>
+</head>
+<body>
+  <header id="stats">
+    <!-- 스크린(모니터) 기준 위치값 -->
+    screenX : <span id="sx">0</span>
+    screenY : <span id="sy">0</span> &nbsp;&nbsp;&nbsp; || &nbsp;&nbsp;&nbsp;
+    
+    <!-- 열려있는 페이지(브라우저) 기준 위치값 -->
+    pageX : <span id="px">0</span>
+    pageY : <span id="py">0</span> &nbsp;&nbsp;&nbsp; || &nbsp;&nbsp;&nbsp;
+
+    <!-- 보여지는 영역 기준 위치값 -->
+    clientX : <span id="cx">0</span>
+    clientY : <span id="cy">0</span> &nbsp;&nbsp;&nbsp; || &nbsp;&nbsp;&nbsp;
+
+    <!-- 스크롤된 거리 -->
+    scrollY : <span id="scrl">0</span>
+
+  </header>
+  <section>
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+    <div>04</div>
+    <div>05</div>
+  </section>
+
+  <script>
+    const el = document.getElementsByTagName('body')[0];
+    console.log(el);
+
+    function scrlPos(){
+      scrl.textContent = window.scrollY;
+    }
+    function mousePos(aa){
+      sx.textContent = aa.screenX;
+      sy.textContent = aa.screenY;
+      px.textContent = aa.pageX;
+      py.textContent = aa.pageY;
+      cx.textContent = aa.clientX;
+      cy.textContent = aa.clientY;
+    }
+
+    el.addEventListener('mousemove', mousePos)
+    window.addEventListener('scroll',scrlPos);
+  </script>
+</body>
+</html>
