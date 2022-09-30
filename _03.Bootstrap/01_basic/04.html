@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOOTSTRAP Layout</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <style>
+    /* h1, h1 + div { border:3px solid red } */
+  </style>
+  <script src="bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="header_wrap bg-dark">
+    <header class="container-lg py-3">
+      <div class="row">
+        <h1 class="col-md text-center text-md-start text-light">Bootstrap</h1>
+        <div class="d-none d-md-block col-md text-end fs-6 text-secondary">menu1  |  menu2  |  menu3  |  menu4</div>
+      </div>      
+    </header>
+  </div>
+
+  <nav class="bg-secondary lh-lg text-center text-white"> MENU1  |  MENU2  |  MENU3  |  MENU4  |  MENU5  |  MENU6</nav>
+  
+  <div class="container-xl border border-dark my-4">
+    <div class="row">  
+      <article class="col-xl-8 border border-secondary">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique dui a nibh suscipit sagittis. Nam vitae varius nisi, id laoreet nisi. Duis elementum tellus ac mattis tincidunt. Aliquam id ullamcorper augue, non posuere odio. Fusce sit amet finibus est, ut ullamcorper urna. Curabitur enim lorem, viverra et felis ut, tincidunt faucibus augue. Pellentesque in hendrerit eros, et bibendum orci. Nunc id mi faucibus, sollicitudin velit id, ornare arcu.<br><br>Nam ut dolor non lectus dapibus rutrum sit amet sed sapien. Sed pulvinar feugiat lectus, luctus ullamcorper leo accumsan eleifend. Curabitur ac finibus nisl, vehicula porta dui. Cras et risus sit amet nunc imperdiet commodo porta quis ipsum. Suspendisse suscipit ligula vel sollicitudin luctus. Donec sagittis auctor neque nec accumsan. Donec sollicitudin suscipit sem, et elementum quam mattis vitae. Vestibulum tempor varius odio, quis rutrum justo. Aenean eleifend in metus sit amet lobortis. Duis diam orci, gravida in consequat a, aliquet vitae sem. Nam condimentum dapibus urna vitae faucibus. Sed felis sem, consectetur non quam in, sodales pretium ipsum. Sed a magna vitae erat lobortis vestibulum. Aliquam erat volutpat. Donec in ipsum at ipsum egestas elementum a a augue. Aenean efficitur hendrerit est non pretium.
+      </article>
+      <div class="row col-xl">
+        <article class="col-lg col-xl-12 border border-secondary">
+          <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+          </ul>
+        </article>
+        <article class="col-lg col-xl-12 col-xl overflow-hidden border border-secondary">
+          <img src="https://via.placeholder.com/200x200" alt="" class="float-start">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique dui a nibh suscipit sagittis. Nam vitae varius nisi, id laoreet nisi. Duis elementum tellus ac mattis tincidunt. Aliquam id ullamcorper augue, non posuere odio. Fusce sit amet finibus est, ut ullamcorper urna. Curabitur enim lorem, viverra et felis ut, tincidunt faucibus augue. Pellentesque in hendrerit eros, et bibendum orci. Nunc id mi faucibus, sollicitudin velit id, ornare arcu.
+        </article>
+      </div>
+    </div> 
+  </div>
+
+  <footer class="bg-secondary text-center text-light py-3">
+    <h2>footer</h2>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bootstrap 기초</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <style>
+    header span { margin-left: 20px;}
+    #w_num { display:inline-block; }
+
+    .header { margin-top:150px; }
+    h1, nav { border:2px solid red}
+  
+  </style>
+  <script src="bootstrap.min.js"></script>
+</head>
+<body>
+  <header class="fixed-top text-center pt-3 bg-primary bg-opacity-75">
+    <p id="w_num" class="border bg-light fs-2 text-danger">가로너비</p>
+    <span><strong>sm</strong> ≥576px</span>
+    <span><strong>md</strong> ≥768px </span>
+    <span><strong>lg</strong> ≥992px </span>
+    <span><strong>xl</strong> ≥1200px </span>
+    <span><strong>xxl</strong> ≥1400px </span>
+  </header>
+
+  <div class="header bg-secondary">
+    <div class="header_in container-lg text-light py-3">
+      <div class="row justify-content-between">
+        <h1 class="col-lg-auto text-center">BOOTSTRAP</h1>
+        <nav class="col-lg-auto text-center">MENU1  |  MENU2  |  MENU3  |  MENU4  |  MENU5  |  MENU6</nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-xl border border-dark my-4 p-3">
+    <section class="row">
+      <article class="col-xxl-8 border border-secondary mb-3 me-xxl-3">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique dui a nibh suscipit sagittis. Nam vitae varius nisi, id laoreet nisi. Duis elementum tellus ac mattis tincidunt. Aliquam id ullamcorper augue, non posuere odio. Fusce sit amet finibus est, ut ullamcorper urna. Curabitur enim lorem, viverra et felis ut, tincidunt faucibus augue. Pellentesque in hendrerit eros, et bibendum orci. Nunc id mi faucibus, sollicitudin velit id, ornare arcu.<br><br>Nam ut dolor non lectus dapibus rutrum sit amet sed sapien. Sed pulvinar feugiat lectus, luctus ullamcorper leo accumsan eleifend. Curabitur ac finibus nisl, vehicula porta dui. Cras et risus sit amet nunc imperdiet commodo porta quis ipsum. Suspendisse suscipit ligula vel sollicitudin luctus. Donec sagittis auctor neque nec accumsan. Donec sollicitudin suscipit sem, et elementum quam mattis vitae. Vestibulum tempor varius odio, quis rutrum justo. Aenean eleifend in metus sit amet lobortis. Duis diam orci, gravida in consequat a, aliquet vitae sem. Nam condimentum dapibus urna vitae faucibus. Sed felis sem, consectetur non quam in, sodales pretium ipsum. Sed a magna vitae erat lobortis vestibulum. Aliquam erat volutpat. Donec in ipsum at ipsum egestas elementum a a augue. Aenean efficitur hendrerit est non pretium.
+      </article>
+      
+      <article class="col-md col-lg-8 col-xxl border border-secondary mb-3 me-md-3">
+        In varius aliquet odio, in sodales quam rhoncus a. Mauris quis ultricies libero. Suspendisse mattis risus urna, sed sollicitudin magna suscipit nec. Aliquam imperdiet lacus sed purus porttitor, ac lacinia lectus consectetur. Praesent id aliquam magna, vitae molestie augue. Curabitur posuere, purus eu hendrerit finibus, erat leo sollicitudin neque, in egestas neque sapien auctor tellus. Sed imperdiet maximus velit at consectetur. Ut pellentesque sodales ante non efficitur. Cras sit amet felis venenatis, elementum tortor a, faucibus arcu. Suspendisse rhoncus augue fringilla, posuere orci id, pretium mi.
+      </article>
+      
+      <article class="col-md  col-xxl border border-secondary mb-3">
+        Nulla blandit a tellus nec dignissim. Vivamus posuere nec neque consectetur tincidunt. Nam a pharetra nunc, id accumsan mauris. Morbi et tortor efficitur, commodo tellus quis, tempor lacus. Vestibulum et ipsum euismod, malesuada purus vel, ultrices elit. Mauris elit purus, suscipit eget tincidunt quis, ultricies et augue. 
+      </article>
+    </section>
+  </div>
+  
+  <footer class="bg-secondary bg-gradient py-3">
+    <p class="container-lg text-white">이 사이트는 부트스트랩 연습용 사이트 입니다</p>
+  </footer>  
+
+  <script>
+    function winWidth(){
+      let ww = window.innerWidth;
+      w_num.innerText = ww;
+    };
+    winWidth();
+    window.addEventListener('resize',winWidth);
+  </script>
+</body>
+</html>

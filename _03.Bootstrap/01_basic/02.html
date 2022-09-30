@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부트스트랩 반응형</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.min.js"></script>
+  <style>
+    #w_num { display: inline-block; }
+    header span { margin-left: 30px; }
+    body > div { margin-top: 100px 0; border: 1px solid green;}
+    body > div > div  { border: 1px solid rgb(0, 0, 0); margin-bottom: 20px;}
+    body > div > div > div { border: 1px solid orange; height: 50px; background: #fff5cc;}
+  </style>
+</head>
+<body>
+  <header class="bg-light text-center py-2 bg-opacity-75">
+    <p id = "w_num" class="border bg-white fs-3">가로너비</p>
+    <span><strong>sm</strong> ≥576px </span>
+    <span><strong>md</strong> ≥768px </span>
+    <span><strong>lg</strong> ≥992px </span>
+    <span><strong>xl</strong> ≥1200px </span>
+    <span><strong>xxl</strong> ≥1400px </span> 
+  </header>
+
+  <div class="container-xxl">
+
+    <div class="row">
+      <div class="col-sm">col-sm (576px부터 flex적용)</div>
+      <div class="col-sm">col</div>
+      <div class="col-lg">col-lg (992px부터 flex적용 - 한줄에 컬럼 3개)</div>
+    </div>
+    
+    <div class="row">
+      <div>아무것도 적용 x</div>
+      <div class="col col-xl-9">col-xl-9</div>
+      <div class="col-md">col-md</div>
+      <div class="col-md">col-md</div>
+    </div>
+    
+    <div class="row justify-content-center">
+      <div class="col col-md-4 col-xl-3"></div>
+      <div class="col col-md-8 col-xl-3"></div>
+      <div>아무것도 적용 x</div>
+    </div>
+
+    <div class="row">
+      <div class="col">col</div>
+      <div class="col-md-auto">col-md-auto col-md-auto</div>
+      <div class="col">col</div>
+      <div class="col col-xl-12">col col-xl-12</div>
+    </div>
+
+  </div>
+
+
+
+  <footer class="bg-dark bg-gradient py-3">
+    <p class="container-lg text-white">이 사이트는 부트스트랩 연습용 사이트 입니다.</p>
+  </footer>
+
+
+  <script>
+    function winWidth(){
+      let ww = window.innerWidth;
+      w_num.innerText = ww;
+    }
+    winWidth();
+    window.addEventListener('resize', winWidth);
+  </script>
+</body>
+</html>
