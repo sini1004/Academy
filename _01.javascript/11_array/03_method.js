@@ -73,8 +73,22 @@ console.log('arr4',arr4);
 arr4.fill('🍻',3); 
 console.log('arr4',arr4);
 
+const arr5 = ['하늘','💐']
 
+//중첩된 배열, 하나의 배열로 쫙 펴기
+const arr6 = [['🍻','🥩','🌼'],[1,2,3,4,]]
+console.log('중첩된 배열', arr6);
+arr7=arr6.flat();
 
+console.log('arr7은?', arr7);
+//1단계까지 풀어줌, 배열안에 배열이 또 있을 경우는 숫자(단계)를 넣어준다
+
+//아이템을 특정값으로 채우기
+arr7.fill('🌹')
+console.log('장미꽃으로 채워주기', arr7);
+
+arr7.fill('a',1,3); //인덱스1부터, 세번째까지
+console.log('장미꽃으로 채워주기', arr7);
 
 
 
