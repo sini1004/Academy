@@ -73,7 +73,16 @@ console.log('arr4',arr4);
 arr4.fill('🍻',3); 
 console.log('arr4',arr4);
 
-const arr5 = ['하늘','💐']
+//배열을 문자열로 합하기
+const arr5 = ['하늘', '🌼', '1004', '💘', 'friday','바다']
+console.log('arr5는??', arr5);
+
+let text = arr5.join();    //자동으로 ,(콤마) 를 이용해 문자로 변화
+console.log(text);
+
+text = arr5.join(' | ');    
+console.log(text);
+
 
 //중첩된 배열, 하나의 배열로 쫙 펴기
 const arr6 = [['🍻','🥩','🌼'],[1,2,3,4,]]
