@@ -25,17 +25,103 @@
   </header>
 
   <main class="container-xl py-5 mb-5">
-    <h1>Dropdown</h1>
+    <h1>Dropdowns</h1>    
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Dropdown link
+      </a>    
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item active" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+    <div class="btn-group">
+      <a class="btn btn-danger dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         Dropdown button
+      </a>    
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">추가1</a></li>
+        <li><a class="dropdown-item" href="#">추가2</a></li>
+      </ul>
+    </div>
+    <div class="btn-group">       
+      <button type="button" class="btn btn-warning">분리형 버튼</button>
+      <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span>
       </button>
+
       <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="#">Action</a></li>
         <li><a class="dropdown-item" href="#">Another action</a></li>
         <li><a class="dropdown-item" href="#">Something else here</a></li>
       </ul>
     </div>
+    <div class="btn-group dropdown-center">
+      <a class="btn btn-info dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Centered Dropdown Button
+      </a>    
+      <ul class="dropdown-menu dropdown-menu-dark">
+        <li><a class="dropdown-item" href="#">sub1</a></li>
+        <li><a class="dropdown-item" href="#">sub2</a></li>
+        <li><a class="dropdown-item" href="#">sub13</a></li>
+      </ul>
+    </div>
+    <div class="btn-group dropup">       
+      <button type="button" class="btn btn-primary">dropup button</button>
+      <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span>
+      </button>
+
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+    <div class="btn-group dropend">       
+      <button type="button" class="btn btn-success">dropend button</button>
+      <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span>
+      </button>
+
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+
+    <h1 class="mt-5">List group / Placeholders</h1>
+    <ul class="list-group">
+      <li class="list-group-item active">An item</li>
+      <li class="list-group-item">A second item</li>
+      <li class="list-group-item">A third item</li>
+      <li class="list-group-item">A fourth item</li>
+      <li class="list-group-item">And a fifth one</li>
+    </ul>
+
+    <div class="list-group mt-3" style="width:400px">
+      <h2>
+        <a href="#" class="list-group-item placeholder-wave"><span class="placeholder col-8 placeholder-lg"></span></a>
+      </h2>
+      <a href="#" class="list-group-item">
+        <span class="placeholder col-3"></span>
+        <span class="placeholder col-5"></span>
+      </a>
+      <a href="#" class="list-group-item"><span class="placeholder col-10 bg-warning"></span></a>
+      <a href="#" class="list-group-item">
+        <span class="placeholder col-2"></span>
+        <span class="placeholder col-5"></span>
+        <span class="placeholder col-4"></span>
+      </a>
+      <a href="#" class="list-group-item"><span class="placeholder col-5"></span></a>
+    </div>
+
   </main>
 
 
