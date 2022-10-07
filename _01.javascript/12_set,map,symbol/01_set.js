@@ -1,6 +1,6 @@
 /*
   set : 정보의 집합
-  배열과 달리 순서(index)가 없음, 아이템 중복 불가
+  배열과 달리 순서(index)가 없음, value만 있음, 아이템 중복 불가
 */
 
 const set1 = new Set(); //set생성
