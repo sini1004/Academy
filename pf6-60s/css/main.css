@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+body { 
+  font-family:'Noto Sans KR', '맑은 고딕', sans-serif; 
+}
+li {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+
+/* header */
+header { 
+  background:url('../img/index_showroom-dosan.jpg') no-repeat center center / cover; 
+  padding:180px 0;
+}
+.h1 {
+  width: 90px;
+}
+.util {
+  margin-top: 15px;
+}
+.util li {
+  margin-left: 24px;
+}
+.util a {
+  color: rgba(0,0,0,0.5);
+}
+
+.nav-item { 
+  margin-right:30px;
+}
+.nav-item:first-child {
+  margin-right: 20px;
+}
+.nav-item > a { 
+  font-family: 'Titillium Web', sans-serif; 
+  font-weight:900; color:#000;  
+}
+
+.m_info {
+  margin: 40px 0 20px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+.m_info span {
+  font-family: 'Titillium Web', sans-serif; 
+  font-size: 13px;
+  font-weight: 700;
+}
