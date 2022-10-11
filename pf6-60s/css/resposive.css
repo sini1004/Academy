@@ -1,0 +1,31 @@
+/* md */
+@media (min-width:768px){
+  header { 
+    padding:180px 0 140px;
+  }
+  .main_text h2 { 
+    font-size:40px; 
+  }
+}
+
+/* lg */
+@media (min-width:992px){
+  header { 
+    padding:210px 0 170px;
+  }
+  .main_text { 
+    width:960px;
+    margin:0 auto 0 auto; 
+  }
+}
+
+/* xl */
+@media (min-width:1200px){
+  .main_text { 
+    width:1140px; 
+    margin:0 auto 0 auto; 
+  }
+  .main_text h2 { 
+    font-size:50px; 
+  }
+}
