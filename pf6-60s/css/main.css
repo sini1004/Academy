@@ -21,6 +21,11 @@ a {
   padding-right: 0;
   padding-left: 0;
 }
+ol, ul {
+  padding-left: 0;
+}
+
+
 
 /* header */
 header { 
@@ -93,7 +98,6 @@ section {
 .section_title img { 
   width: 50px;
   height: 50px;
-  z-index: 99;
 }
 .section_thumbnail {
   padding: 15px;
@@ -148,11 +152,38 @@ section {
   margin-top: 40px;
 }
 
-.section4 {}
+.section4 { 
+  padding: 70px 0 150px; 
+}
 .store_info_wrap {}
 .store_info_wrap h3 {}
-.store_info_wrap p {}
+.store_info_wrap p { 
+  color:#333; 
+}
 .store_info {}
-.store_info li {}
+.store_info li { 
+  font-size:14px; 
+}
+.store_info .title { 
+  font-family: 'Titillium Web', sans-serif; 
+  font-weight:600; 
+  color:#333}
 
+.section5 {   
+  height:48vh; 
+  max-height:480px;
+  padding:0;  
+}
+.section5 .section_bg { 
+  width:100%; 
+  height:100%;
+  background:url('../img/index_story.jpg') no-repeat 50% 50% /cover;}
+.section5 .section_title { 
+  color:#fff; 
+  padding-top:70px; 
+}
+
+.section6 { 
+  background:#F0F0F0; 
+}
 

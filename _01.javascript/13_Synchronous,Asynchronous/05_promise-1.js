@@ -15,7 +15,7 @@ function getChicken(){
 
 // fechEgg('?')
 // freyEgg('알?')
-getChicken('닭?')
+getChicken()
 .catch((error) => {
   console.log(error);
   return '🌾'
