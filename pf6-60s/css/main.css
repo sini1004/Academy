@@ -230,3 +230,51 @@ section,footer {
   width:16px; 
   height:16px; 
 }
+.store {
+  color: #666;
+}
+.store .title{
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+.store .desc {
+  font-size: 12px;
+}
+.store a {
+  display: inline-block;
+  border-bottom: 1px solid #bbb;
+  font-size: 12px;
+  color: #999;
+  padding-bottom: 2px;
+}
+.info {
+  line-height: 1.4em;
+}
+.info .copy {
+  font-size: 12px;
+  color: #999;
+}
+.info .address {
+  font-size: 11px;
+  color: #666;
+}
+.info .address span{
+  display: inline-block;
+  color: #999;
+  margin-left: 8px;
+}
+.info .address a {
+  color: #999;
+  margin-left: 4px;
+}
+.address li span:first-child {
+  margin-left: 0;
+}
+
+.navbar-toggler {
+  border: 0 solid transparent;
+}
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0;
+}
