@@ -1,0 +1,50 @@
+@charset "utf-8";
+*{ margin:0; padding:0; }
+li { list-style:none; }
+a { text-decoration:none; }
+body { 
+  font-family:'맑은 고딕', arial, sans-serif;
+  width:960px;
+  margin:auto;
+  color:#666;
+}
+
+header {
+  height:120px;
+  border-bottom:5px solid #222;
+  margin-bottom:30px;
+}
+h1 {
+  float: left;
+  width:225px; height:90px;
+  background:url('../img/maker-logo.png') no-repeat;
+  text-indent:-9999px;
+  margin-top:25px
+}
+
+nav {
+  float: right;
+  text-align: right;
+  padding-top: 50px;
+  font-size: 1.6em;
+}
+nav a {
+  padding-left: 20px;
+  color: black;
+  font-weight: bold;
+}
+nav a:hover, .current {
+  color: red;
+}
+
+h2 {
+  width: 100% ;
+  margin-bottom: 40px;
+}
+
+#content { display:flex; flex-wrap: wrap;}
+.event { flex:1; text-align:center; }
+.event p { border-left:1px solid #999 }
+.event:first-of-type p { border:0; }
+
+
