@@ -1,0 +1,23 @@
+$size: 100px;
+
+.container {
+  border: 2px solid gray;
+
+  .item {
+    width: $size * 3;
+    height: $size;
+    background-color: orange;
+  }
+}
+
+.box {
+  width: $size * 7;
+  border: 5px solid #f8f8f8;
+  p {
+    color: red;
+    span {
+      font-weight: bold;
+      color: #000;
+    }
+  }
+}
