@@ -1,0 +1,13 @@
+.wrap {
+  background: lightcyan;
+}
+.wrap h1 {
+  color: red;
+}
+.wrap p {
+  color: cadetblue;
+}
+.wrap p span {
+  color: white;
+  background: grey;
+}/*# sourceMappingURL=style.css.map */
