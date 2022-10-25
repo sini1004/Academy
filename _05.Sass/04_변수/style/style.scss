@@ -5,4 +5,36 @@
 
 button {
   margin: 20px;
+  border: none;
+  border-radius: 10px;
+
+  &:nth-child(1) {
+    color: white;
+    background: crimson;
+    width: 90px;
+  }
+  &:nth-child(2) {
+    color: white;
+    background: cornflowerblue;
+    width: 190px;
+  }
+  &:nth-child(3) {
+    color: white;
+    background: darkcyan;
+    width: 130px;
+  }
+}
+
+p {
+  &:nth-child(1) {
+    color: crimson;
+  }
+  &:nth-child(2) {
+    color: cornflowerblue;
+  }
+  &:nth-child(3) {
+    height: 90px;
+    background: burlywood;
+    color: darkcyan;
+  }
 }

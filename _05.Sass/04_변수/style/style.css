@@ -5,4 +5,33 @@
 */
 button {
   margin: 20px;
+  border: none;
+  border-radius: 10px;
+}
+button:nth-child(1) {
+  color: white;
+  background: crimson;
+  width: 90px;
+}
+button:nth-child(2) {
+  color: white;
+  background: cornflowerblue;
+  width: 190px;
+}
+button:nth-child(3) {
+  color: white;
+  background: darkcyan;
+  width: 130px;
+}
+
+p:nth-of-type(1) {
+  color: crimson;
+}
+p:nth-of-type(2) {
+  color: cornflowerblue;
+}
+p:nth-of-type(3) {
+  height: 90px;
+  background: burlywood;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
