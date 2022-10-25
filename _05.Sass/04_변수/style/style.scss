@@ -8,6 +8,7 @@
 
 $main-color: lightcoral; //전역변수
 $secon-color: cornflowerblue;
+$white-color: white;
 $basic-size: 90px;
 
 button {
@@ -16,17 +17,17 @@ button {
   border-radius: 10px;
 
   &:nth-child(1) {
-    color: white;
+    color: $white-color;
     background: $main-color;
     width: $basic-size;
   }
   &:nth-child(2) {
-    color: white;
+    color: $white-color;
     background: $secon-color;
     width: $basic-size * 3;
   }
   &:nth-child(3) {
-    color: white;
+    color: $white-color;
     background: darkcyan;
     width: $basic-size * 2;
   }
