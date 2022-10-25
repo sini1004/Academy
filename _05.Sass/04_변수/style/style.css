@@ -1,7 +1,10 @@
 @charset "UTF-8";
 /*
   변수는 스타일 시트에서 반복(재사용)할 정보를 저장하는 방법
-  $ 기호 사용
+  - $ 기호 사용
+  - 변수 이름은 직관적인 이름 권장
+  - 영문, 숫자, 특수문자는 '-', '_' 만 포함
+  - 갯수제한 없음, 가독성을 고려해 사용, 남용X
 */
 button {
   margin: 20px;
@@ -10,18 +13,18 @@ button {
 }
 button:nth-child(1) {
   color: white;
-  background: crimson;
+  background: lightcoral;
   width: 90px;
 }
 button:nth-child(2) {
   color: white;
   background: cornflowerblue;
-  width: 190px;
+  width: 270px;
 }
 button:nth-child(3) {
   color: white;
   background: darkcyan;
-  width: 130px;
+  width: 180px;
 }
 
 p:nth-of-type(1) {
@@ -31,7 +34,7 @@ p:nth-of-type(2) {
   color: cornflowerblue;
 }
 p:nth-of-type(3) {
-  height: 90px;
+  height: 63px;
   background: burlywood;
-  color: white;
+  color: darkcyan;
 }/*# sourceMappingURL=style.css.map */
