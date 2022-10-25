@@ -1,3 +1,4 @@
+//중첩 : 한줄짜리 주석(javascript등 프로그래밍언어에서 주로 쓰임) -css파일로 컴파일 후엔 안보임
 .wrap {
   background: lightcyan;
   h1 {
@@ -6,8 +7,23 @@
   p {
     color: cadetblue;
     span {
+      //다중 중첩
       color: white;
       background: grey;
     }
   }
 }
+
+.btn1 {
+  padding: 0.5em 1em;
+  border: 1px solid #999;
+  border-radius: 30px;
+}
+.btn1:hover {
+  background-color: crimson;
+}
+
+/*
+  sass style/style.scss:style/style.css : 한번만 컴파일
+  sass --watch style/style.scss:style/style.css : 자동 컴파일
+*/
