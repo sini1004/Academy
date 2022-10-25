@@ -14,13 +14,35 @@
   }
 }
 
-.btn1 {
+button {
   padding: 0.5em 1em;
   border: 1px solid #999;
   border-radius: 30px;
 }
-.btn1:hover {
-  background-color: crimson;
+.btn1 {
+  background: deeppink;
+
+  &:hover {
+    background: {
+      color: crimson;
+    }
+  }
+}
+/* 
+  & : 자신이 속한 상위 선택자
+  font, text, background 등은 css 단축속성 : sass에서 중첩을 이용해 단축 속성의 하위 속성을 그룹화
+*/
+
+.btn2 {
+  background: deepskyblue;
+  &:hover {
+    background: {
+      color: cornflowerblue;
+    }
+    font: {
+      size: 20px;
+    }
+  }
 }
 
 /*
