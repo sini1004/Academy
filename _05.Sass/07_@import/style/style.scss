@@ -2,3 +2,11 @@
   Sass는 여러개의 Sass파일을 불러 모으는 기능이 있음 : @import
   _(언더스코어, 언더바)로 시작하는 파일은 컴파일 대상이 아님.
 */
+
+@import "variable.scss"; //_ 생략하고 불러옴
+@import "mixin.scss";
+
+div {
+  @include box-style($main-color, $sub-color);
+  @include border-line;
+}
