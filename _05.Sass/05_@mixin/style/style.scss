@@ -1,6 +1,7 @@
 /*
   믹스인 : 함수와 비슷, 반복적으로 재사용할 css스타일 그룹 선언
 */
+
 //mixin 스타일 정의
 @mixin box-style() {
   width: 100px;
@@ -10,9 +11,40 @@
   align-items: center;
   background-color: lightpink;
   color: mediumvioletred;
+  font: {
+    size: 20px;
+    weight: bold;
+  }
+}
+@mixin box-style2($bg-color: yellow, $font-color: green) {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-color;
+  color: $font-color;
+  font: {
+    size: 20px;
+    weight: bold;
+  }
+  margin: 20px;
 }
 
-//mixin 호출
+//mixin 호출 (인수)
 .b1 {
-  @include box-style();
+  @include box-style;
+}
+
+//mixin (인자가 지정된)적용, 인자값을 적어 주지 않으면 적용X
+.b2 {
+  @include box-style2;
+}
+
+//mixin에서 기본값이 설정되어 있을 때 호출시 인자를 전달하지 않으면 기본값으로 적용
+.b3 {
+  @include box-style2(aqua);
+}
+.b4 {
+  @include box-style2(black, white);
 }

@@ -10,4 +10,45 @@
   align-items: center;
   background-color: lightpink;
   color: mediumvioletred;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.b2 {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  color: green;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.b3 {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+  color: green;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.b4 {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px;
 }/*# sourceMappingURL=style.css.map */
