@@ -30,6 +30,9 @@
   }
   margin: 20px;
 }
+@mixin border-line($width, $style) {
+  border: $width $style red;
+}
 
 //mixin 호출 (인수)
 .b1 {
@@ -39,11 +42,13 @@
 //mixin (인자가 지정된)적용, 인자값을 적어 주지 않으면 적용X
 .b2 {
   @include box-style2;
+  font-size: 40px;
 }
 
 //mixin에서 기본값이 설정되어 있을 때 호출시 인자를 전달하지 않으면 기본값으로 적용
 .b3 {
   @include box-style2(aqua);
+  @include border-line(5px, dotted);
 }
 .b4 {
   @include box-style2(black, white);
