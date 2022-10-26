@@ -1,4 +1,21 @@
 @charset "UTF-8";
 /*
   @content mixin 사용시 지정된 스타일 이외에도 별도로 스타일을 추가
-*//*# sourceMappingURL=style.css.map */
+*/
+.b1 {
+  width: 100px;
+  height: 50px;
+  border: none;
+}
+
+.b2 {
+  width: 100px;
+  height: 50px;
+  border: none;
+}
+
+.b3 {
+  width: 100px;
+  height: 50px;
+  border: none;
+}/*# sourceMappingURL=style.css.map */
