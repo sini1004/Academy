@@ -3,16 +3,33 @@
 */
 
 @mixin btn-style {
+  @content;
   width: 100px;
   height: 50px;
   border: none;
 }
+@mixin btn-style2($hv-Bgcolor) {
+  //필터링, 인자값 지정
+  @content;
+  width: 100px;
+  height: 50px;
+  border: none;
+  &:hover {
+    background-color: $hv-Bgcolor;
+    color: white;
+  }
+}
 
 .b1 {
-  @include btn-style();
+  @include btn-style {
+    background-color: coral;
+    color: white;
+  }
 }
 .b2 {
-  @include btn-style();
+  @include btn-style2(black) {
+    background-color: yellow;
+  }
 }
 .b3 {
   @include btn-style();
