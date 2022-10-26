@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/*
+  Sass는 여러개의 Sass파일을 불러 모으는 기능이 있음 : @import
+  _(언더스코어, 언더바)로 시작하는 파일은 컴파일 대상이 아님.
+  파일이 많아도 css은 하나만 만들어짐 : 웹사이트 성능개선에 도움.
+*/
+div {
+  width: 300px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: skyblue;
+  color: brown;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 auto;
+  transition: all 0.4s;
+  border: 2px dotted red;
+}
+div:hover {
+  transform: rotate(45deg);
+}/*# sourceMappingURL=style.css.map */
