@@ -1,0 +1,18 @@
+//mixin 스타일 정의
+@mixin box-style($bg-color: yellow, $font-color: green) {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-color;
+  color: $font-color;
+  font: {
+    size: 20px;
+    weight: bold;
+  }
+  margin: 20px;
+}
+@mixin border-line($width: 2px, $style: dotted) {
+  border: $width $style red;
+}
