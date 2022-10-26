@@ -1,1 +1,13 @@
-/*# sourceMappingURL=style.css.map */
+@charset "UTF-8";
+/*
+  믹스인 : 함수와 비슷, 반복적으로 재사용할 css스타일 그룹 선언
+*/
+.b1 {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightpink;
+  color: mediumvioletred;
+}/*# sourceMappingURL=style.css.map */

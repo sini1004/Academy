@@ -2,7 +2,7 @@
   믹스인 : 함수와 비슷, 반복적으로 재사용할 css스타일 그룹 선언
 */
 //mixin 스타일 정의
-@mixin bos-style() {
+@mixin box-style() {
   width: 100px;
   height: 100px;
   display: flex;
@@ -10,4 +10,9 @@
   align-items: center;
   background-color: lightpink;
   color: mediumvioletred;
+}
+
+//mixin 호출
+.b1 {
+  @include box-style();
 }
