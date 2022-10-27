@@ -1,1 +1,47 @@
-/*# sourceMappingURL=style.css.map */
+@charset "UTF-8";
+/*
+  다른 클라스의 스타일을 그대로 가져와서 써야할때 : @extend 클라스명
+*/
+.msg, .bad_msg {
+  padding: 10px;
+  background-color: lightseagreen;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+
+.bad_msg {
+  background-color: crimson;
+}
+
+.btn, .input_a {
+  border: none;
+  width: 120px;
+  height: 50px;
+  border-radius: 10px;
+  border: 3px solid orange;
+  background-color: lemonchiffon;
+}
+
+.input_a {
+  width: 300px;
+  padding-left: 20px;
+}
+
+/*
+  플레이스홀더(placeholder), 유령클라스 
+  - @extend시 가져다 쓰는 용도로만 만들어짐
+  - css세트들을 변수처럼 선언해서 사용
+*/
+.box2, .box1 {
+  width: 200px;
+  height: 100px;
+  border: 2px solid khaki;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box2 {
+  background-color: antiquewhite;
+}/*# sourceMappingURL=style.css.map */

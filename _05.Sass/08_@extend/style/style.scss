@@ -1,0 +1,62 @@
+/*
+  다른 클라스의 스타일을 그대로 가져와서 써야할때 : @extend 클라스명
+*/
+.msg {
+  padding: 10px;
+  background-color: lightseagreen;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+.bad_msg {
+  @extend .msg;
+  background-color: crimson;
+}
+
+.btn {
+  border: none;
+  width: 120px;
+  height: 50px;
+  border-radius: 10px;
+  border: 3px solid orange;
+  background-color: lemonchiffon;
+}
+
+.input_a {
+  @extend .btn;
+  width: 300px;
+  padding-left: 20px;
+}
+
+/*
+  플레이스홀더(placeholder), 유령클라스 
+  - @extend시 가져다 쓰는 용도로만 만들어짐
+  - css세트들을 변수처럼 선언해서 사용
+*/
+%box {
+  width: 200px;
+  height: 100px;
+  border: 2px solid khaki;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box1 {
+  @extend %box;
+}
+.box2 {
+  @extend %box;
+  background-color: antiquewhite;
+}
+
+// #msg {
+//   padding: 10px;
+//   background-color: crimson;
+//   text-transform: uppercase;
+//   color: white;
+//   text-align: center;
+// }
+// .bad_msg_id {
+//   @extend #msg;
+// }
