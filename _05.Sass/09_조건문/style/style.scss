@@ -1,0 +1,18 @@
+/*
+  Sass 조건문 사용
+  1. 변수 설정 - $를 사용하여 변수 설정해준다.
+*/
+
+$condition: true; //boolean데이터(true, false) 구분
+$wanted-color: green;
+
+.h1_1 {
+  @if $condition {
+    color: rebeccapurple;
+  }
+}
+.h1_2 {
+  @if $wanted-color == green {
+    color: red;
+  }
+}
