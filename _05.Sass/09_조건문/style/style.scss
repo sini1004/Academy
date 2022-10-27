@@ -16,3 +16,47 @@ $wanted-color: green;
     color: red;
   }
 }
+
+@mixin select-color($color) {
+  @if $color == pink {
+    //pink로 인자를 전달했을때만 사용가능
+    background-color: $color;
+  }
+  padding: 20px;
+  color: #555;
+}
+
+.h1_3 {
+  @include select-color(pink);
+}
+
+@mixin bg-color($d, $f-color) {
+  @if $d == green {
+    background-color: $d;
+  } @else {
+    background-color: #555;
+  }
+  color: $f-color;
+}
+
+.h1_4 {
+  @include bg-color(red, white);
+}
+
+//변수 설정
+$box-width1: 900px;
+$box-width2: 500px;
+.v1,
+.v2 {
+  height: 100px;
+  border: 2px solid #555;
+}
+//삼항연산자
+.v1 {
+  width: $box-width1;
+  background-color: if($box-width1 > 400, coral, blue);
+}
+.v2 {
+  width: $box-width2;
+  background-color: if($box-width2 < 400, coral, blue);
+}
