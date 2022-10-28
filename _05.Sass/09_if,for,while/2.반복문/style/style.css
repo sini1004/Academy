@@ -1,22 +1,28 @@
+@charset "UTF-8";
+/*
+  반복문 사용
+  @each $변수 in 데이터 {
+    반복내용 
+  }
+*/
+.fruits li.apple {
+  background-image: url("../img/apple.png");
+}
+.fruits li.banana {
+  background-image: url("../img/banana.png");
+}
+.fruits li.grape {
+  background-image: url("../img/grape.png");
+}
+.fruits li.mango {
+  background-image: url("../img/mango.png");
+}
 .fruits li {
   width: 200px;
   height: 200px;
   list-style: none;
   display: inline-block;
-}
-
-.fruits li.apple {
-  background: url(../img/apple.png) no-repeat center center/contain;
-}
-
-.fruits li.banana {
-  background: url(../img/banana.png) no-repeat center center/contain;
-}
-
-.fruits li.grape {
-  background: url(../img/grape.png) no-repeat center center/contain;
-}
-
-.fruits li.mango {
-  background: url(../img/mango.png) no-repeat center center/contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
 }/*# sourceMappingURL=style.css.map */
