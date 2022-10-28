@@ -4,17 +4,19 @@
   @each $변수 in 데이터 {
     반복내용 
   }
+
+  index($변수, 아이템) => 아이템이 $변수에서 몇번째인지 알아옴
 */
-.fruits li.apple {
+.fruits li:nth-child(1) {
   background-image: url("../img/apple.png");
 }
-.fruits li.banana {
+.fruits li:nth-child(2) {
   background-image: url("../img/banana.png");
 }
-.fruits li.grape {
+.fruits li:nth-child(3) {
   background-image: url("../img/grape.png");
 }
-.fruits li.mango {
+.fruits li:nth-child(4) {
   background-image: url("../img/mango.png");
 }
 .fruits li {

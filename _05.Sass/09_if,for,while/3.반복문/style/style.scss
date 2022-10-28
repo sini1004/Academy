@@ -3,12 +3,16 @@
   @each $변수 in 데이터 {
     반복내용 
   }
+
+  index($변수, 아이템) => 아이템이 $변수에서 몇번째인지 알아옴
 */
 $fruits: (apple, banana, grape, mango); //변수(배열같은)설정
 
 .fruits {
   @each $fruit in $fruits {
-    li.#{$fruit} {
+    $index: index($fruits, $fruit);
+
+    li:nth-child(#{$index}) {
       background-image: url("../img/#{$fruit}.png");
     }
   }
