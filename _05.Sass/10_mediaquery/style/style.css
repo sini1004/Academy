@@ -1,0 +1,19 @@
+div {
+  width: 200px;
+  height: 200px;
+}
+@media (max-width:767px) {
+  div {
+    background-color: #ee7ca2;
+  }
+}
+@media (min-width: 767px) and (max-width: 1000px) {
+  div {
+    background-color: #aa5571;
+  }
+}
+@media (min-width: 1001px) {
+  div {
+    background-color: #6d3447;
+  }
+}/*# sourceMappingURL=style.css.map */

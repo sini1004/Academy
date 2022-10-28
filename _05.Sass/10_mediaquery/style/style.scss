@@ -1,0 +1,21 @@
+$respons-mobile: "(max-width:767px)";
+$respons-tablet: "(min-width: 767px) and (max-width: 1000px)";
+$respons-pc: "(min-width: 1001px)";
+
+div {
+  width: 200px;
+  height: 200px;
+
+  @media #{$respons-mobile} {
+    //767px보다 작은사이즈까지 적용
+    background-color: #ee7ca2;
+  }
+
+  @media #{$respons-tablet} {
+    background-color: #aa5571;
+  }
+
+  @media #{$respons-pc} {
+    background-color: #6d3447;
+  }
+}
