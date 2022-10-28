@@ -1,0 +1,20 @@
+.fruits {
+}
+.fruits li {
+  width: 200px;
+  height: 200px;
+  list-style: none;
+  display: inline-block;
+}
+.fruits li.apple {
+  background: url(../img/apple.png) no-repeat center center / contain;
+}
+.fruits li.banana {
+  background: url(../img/banana.png) no-repeat center center / contain;
+}
+.fruits li.grape {
+  background: url(../img/grape.png) no-repeat center center / contain;
+}
+.fruits li.mango {
+  background: url(../img/mango.png) no-repeat center center / contain;
+}
