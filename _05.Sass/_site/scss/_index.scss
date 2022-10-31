@@ -14,11 +14,64 @@
   text-align: center;
   .login_logo {
     height: 100px;
+    margin-bottom: 20px;
     background: {
-      image: url("../img/logo.png");
+      image: url("../img/logo.png"); /*컴파일 된 이후의 경로 체크!*/
       repeat: no-repeat;
       position: center;
       size: auto 100%;
     }
+  }
+  .login_account {
+    font-size: 0.8em;
+    color: $opacityBlack;
+    text-align: center;
+    a {
+      color: $gray1;
+    }
+  }
+}
+
+.login_form {
+  border: 1px solid blue;
+  width: 240px;
+  margin: 0 auto 80px;
+  font-size: 0.8em;
+  input {
+    width: 240px;
+    height: 40px;
+    border: 1px solid $gray1;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: $gray2;
+    }
+  }
+  .login_form_id {
+    border-radius: 3px 3px 0 0;
+    border-bottom: none;
+    padding-left: 10px;
+  }
+  .login_form_pw {
+    border-radius: 0 0 3px 3px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-left: 10px;
+    margin-bottom: 7px;
+  }
+  .login_form_btn {
+    background-color: #0040ff;
+    color: white;
+    &:hover {
+      background-color: white;
+      color: #0040ff;
+    }
+  }
+  .login_form_check {
+    width: 15px;
+    vertical-align: middle;
+  }
+  label {
+    color: $gray1;
   }
 }
