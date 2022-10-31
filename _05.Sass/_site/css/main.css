@@ -25,10 +25,52 @@ a {
   text-decoration: none;
 }
 
+.nav {
+  height: 100%;
+  width: 70px;
+  border-radius: 0;
+  position: fixed;
+  background-color: #eeeeee;
+  padding-top: 50px;
+}
+.nav .nav_list .nav_btn {
+  padding: 14px 0;
+  text-align: center;
+  color: #9e9e9e;
+}
+.nav .nav_list .nav_btn.active {
+  color: black;
+}
+
+.header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  padding: 50px 20px 20px;
+}
+.header .header_title {
+  font-size: 1.4em;
+}
+.header .header_menu span {
+  height: 36px;
+  width: 36px;
+  border-radius: 18px;
+  display: inline-block;
+  text-align: center;
+  line-height: 36px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.header .header_menu span:hover {
+  background-color: #f8f8f8;
+}
+
 .login_container {
   width: 100%;
   height: 100%;
-  background-color: #e5e5e5;
+  background-color: #eeeeee;
 }
 
 .login {
@@ -58,7 +100,6 @@ a {
 }
 
 .login_form {
-  border: 1px solid blue;
   width: 240px;
   margin: 0 auto 80px;
   font-size: 0.8em;
@@ -99,6 +140,18 @@ a {
 }
 .login_form label {
   color: #333333;
+}
+
+.chats {
+  border: 1px solid red;
+  margin-left: 70px;
+}
+
+.preview a {
+  color: #333333;
+}
+.preview:hover {
+  background-color: #f8f8f8;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,12 @@
-$bg-color: #e5e5e5;
+$bg-color: #eeeeee;
 $main-color: #efd725;
 $gray1: #333333;
 $gray2: #9e9e9e;
+$gray3: #f8f8f8;
 $opacityBlack: rgba(0, 0, 0, 0.2);
+
+@mixin set_box($height, $width: 100%, $border-radius: 0) {
+  height: $height;
+  width: $width;
+  border-radius: $border-radius;
+}

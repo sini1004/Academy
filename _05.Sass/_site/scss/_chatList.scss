@@ -1,0 +1,27 @@
+.chats {
+  border: 1px solid red;
+  margin-left: 70px;
+}
+.previews {
+  .previews_list {
+  }
+}
+
+.preview {
+  a {
+    color: $gray1;
+    .preview_column {
+      .preview_pic {
+      }
+      .preview_nick {
+      }
+      .preview_mgs {
+      }
+      .preview_time {
+      }
+    }
+  }
+  &:hover {
+    background-color: $gray3;
+  }
+}
