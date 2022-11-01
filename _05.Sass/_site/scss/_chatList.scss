@@ -10,12 +10,38 @@
 a.preview_wrap {
   color: #000;
   .preview {
+    position: relative;
+    background-color: bisque;
+    display: flex;
+    padding: 16px;
     .preview_column {
+      .preview_pic {
+        @include set_box(50px, 50px, 20px);
+        background-color: $main-color;
+        margin-right: 16px;
+      }
       .preview_nick {
+        width: 50vw;
+        font-size: 0.9em;
+        margin-bottom: 6px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .preview_msg {
+        width: 50vw;
+        font-size: 0.85em;
+        color: #999;
+        display: -webkit-box;
+        word-break: break-word;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
       }
       .preview_time {
+        position: absolute;
+        top: 16px;
+        right: 16px;
       }
     }
   }

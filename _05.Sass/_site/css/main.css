@@ -49,6 +49,7 @@ a {
   position: sticky;
   top: 0;
   padding: 50px 20px 20px;
+  z-index: 999;
 }
 .header .header_title {
   font-size: 1.4em;
@@ -149,6 +150,42 @@ a {
 
 a.preview_wrap {
   color: #000;
+}
+a.preview_wrap .preview {
+  position: relative;
+  background-color: bisque;
+  display: flex;
+  padding: 16px;
+}
+a.preview_wrap .preview .preview_column .preview_pic {
+  height: 50px;
+  width: 50px;
+  border-radius: 20px;
+  background-color: #1736ff;
+  margin-right: 16px;
+}
+a.preview_wrap .preview .preview_column .preview_nick {
+  width: 50vw;
+  font-size: 0.9em;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+a.preview_wrap .preview .preview_column .preview_msg {
+  width: 50vw;
+  font-size: 0.85em;
+  color: #999;
+  display: -webkit-box;
+  word-break: break-word;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+a.preview_wrap .preview .preview_column .preview_time {
+  position: absolute;
+  top: 16px;
+  right: 16px;
 }
 
 /*# sourceMappingURL=main.css.map */
