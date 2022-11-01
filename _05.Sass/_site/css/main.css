@@ -46,10 +46,11 @@ a {
   background-color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: sticky;
   top: 0;
   padding: 50px 20px 20px;
-  z-index: 999;
+  z-index: 10;
 }
 .header .header_title {
   font-size: 1.4em;
@@ -144,7 +145,6 @@ a {
 }
 
 .chats {
-  border: 1px solid red;
   margin-left: 70px;
 }
 
@@ -153,7 +153,6 @@ a.preview_wrap {
 }
 a.preview_wrap .preview {
   position: relative;
-  background-color: bisque;
   display: flex;
   padding: 16px;
 }
@@ -174,11 +173,11 @@ a.preview_wrap .preview .preview_column .preview_nick {
 }
 a.preview_wrap .preview .preview_column .preview_msg {
   width: 50vw;
-  font-size: 0.85em;
-  color: #999;
+  font-size: 0.82em;
+  color: #777;
   display: -webkit-box;
   word-break: break-word;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -186,6 +185,14 @@ a.preview_wrap .preview .preview_column .preview_time {
   position: absolute;
   top: 16px;
   right: 16px;
+  font-size: 0.8em;
+  color: #9e9e9e;
+}
+a.preview_wrap .preview:hover {
+  background-color: #f8f8f8;
+}
+a.preview_wrap:first-child > .preview {
+  background-color: #fafafa;
 }
 
 /*# sourceMappingURL=main.css.map */
