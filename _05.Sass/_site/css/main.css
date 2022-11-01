@@ -147,11 +147,8 @@ a {
   margin-left: 70px;
 }
 
-.preview a {
-  color: #333333;
-}
-.preview:hover {
-  background-color: #f8f8f8;
+a.preview_wrap {
+  color: #000;
 }
 
 /*# sourceMappingURL=main.css.map */
