@@ -11,4 +11,9 @@ a.preview_wrap {
   &:first-child > .preview {
     background-color: #fafafa;
   }
+  .preview {
+    &:hover {
+      background-color: $gray3;
+    }
+  }
 }

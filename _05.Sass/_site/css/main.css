@@ -106,9 +106,6 @@ a {
   font-size: 0.8em;
   color: #9e9e9e;
 }
-.preview:hover {
-  background-color: #f8f8f8;
-}
 
 .login_container {
   width: 100%;
@@ -194,6 +191,36 @@ a.preview_wrap {
 }
 a.preview_wrap:first-child > .preview {
   background-color: #fafafa;
+}
+a.preview_wrap .preview:hover {
+  background-color: #f8f8f8;
+}
+
+.chat {
+  border: 2px solid red;
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+}
+
+.chat_screen {
+  border: 2px solid blue;
+  height: calc(100% - 140px);
+  overflow: auto;
+}
+.chat_screen .chat_screen_bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.chat_user {
+  background-color: antiquewhite;
+}
+
+.chat_form {
+  background-color: skyblue;
+  height: 140px;
 }
 
 /*# sourceMappingURL=main.css.map */
