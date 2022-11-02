@@ -37,5 +37,20 @@
 }
 
 .bubble {
+  @include set_box(auto, 100%, 5px);
   background-color: white;
+  position: relative;
+  box-shadow: 2px 2px 5px $opacityBlack;
+  font-size: 0.85em;
+  padding: 10px;
+  &::before {
+    @include set_box(0, 0);
+    position: absolute;
+    content: "";
+    display: block;
+    top: 10px;
+    left: -10px;
+    border-bottom: 12px solid transparent;
+    border-right: 10px solid white;
+  }
 }
