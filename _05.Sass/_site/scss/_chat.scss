@@ -41,4 +41,20 @@
 .chat_form {
   background-color: white;
   height: 140px;
+  padding: 10px;
+  .chat_form_msg {
+    @include set_box(80px, 100%);
+    resize: none;
+    border: none;
+    outline: none;
+  }
+  .chat_form_util {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .chat_form_util_plugin {
+    }
+    .chat_form_util_submit {
+    }
+  }
 }

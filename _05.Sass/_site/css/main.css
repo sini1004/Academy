@@ -264,6 +264,20 @@ a.preview_wrap .preview:hover {
 .chat_form {
   background-color: white;
   height: 140px;
+  padding: 10px;
+}
+.chat_form .chat_form_msg {
+  height: 80px;
+  width: 100%;
+  border-radius: 0;
+  resize: none;
+  border: none;
+  outline: none;
+}
+.chat_form .chat_form_util {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */
