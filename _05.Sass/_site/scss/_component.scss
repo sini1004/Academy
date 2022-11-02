@@ -10,7 +10,7 @@
     }
     .preview_nick {
       width: 50vw;
-      font-size: 0.9em;
+      font-size: 0.85em;
       margin-bottom: 6px;
       white-space: nowrap;
       overflow: hidden;
@@ -34,4 +34,8 @@
       color: $gray2;
     }
   }
+}
+
+.bubble {
+  background-color: white;
 }

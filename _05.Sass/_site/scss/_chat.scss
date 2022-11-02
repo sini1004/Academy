@@ -10,16 +10,35 @@
     position: sticky;
     top: 0;
     z-index: 10;
+
+    .chat_nick {
+      font-size: 1em;
+    }
   }
+}
+
+.bubble_container {
+  background-color: #d8d8d8;
 }
 
 .chat_user {
   background-color: antiquewhite;
 }
 
-.bubble {
-}
-.bubble_time {
+.bubble_wrap {
+  border: 2px solid black;
+  display: flex;
+  .bubble_content {
+    border: 3px solid yellow;
+    width: 80%;
+    max-width: 700px;
+  }
+  .bubble_time {
+    font-size: 0.8em;
+    display: flex;
+    align-items: flex-end;
+    margin-left: 6px;
+  }
 }
 
 .chat_form {

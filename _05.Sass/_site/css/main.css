@@ -83,7 +83,7 @@ a {
 }
 .preview .preview_column .preview_nick {
   width: 50vw;
-  font-size: 0.9em;
+  font-size: 0.85em;
   margin-bottom: 6px;
   white-space: nowrap;
   overflow: hidden;
@@ -105,6 +105,10 @@ a {
   right: 16px;
   font-size: 0.8em;
   color: #9e9e9e;
+}
+
+.bubble {
+  background-color: white;
 }
 
 .login_container {
@@ -213,9 +217,32 @@ a.preview_wrap .preview:hover {
   top: 0;
   z-index: 10;
 }
+.chat_screen .chat_screen_bar .chat_nick {
+  font-size: 1em;
+}
+
+.bubble_container {
+  background-color: #d8d8d8;
+}
 
 .chat_user {
   background-color: antiquewhite;
+}
+
+.bubble_wrap {
+  border: 2px solid black;
+  display: flex;
+}
+.bubble_wrap .bubble_content {
+  border: 3px solid yellow;
+  width: 80%;
+  max-width: 700px;
+}
+.bubble_wrap .bubble_time {
+  font-size: 0.8em;
+  display: flex;
+  align-items: flex-end;
+  margin-left: 6px;
 }
 
 .chat_form {
