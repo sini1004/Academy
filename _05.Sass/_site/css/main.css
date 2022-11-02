@@ -220,16 +220,15 @@ a.preview_wrap .preview:hover {
 }
 
 .chat {
-  border: 2px solid red;
   height: 100%;
   width: 100%;
   border-radius: 0;
 }
 
 .chat_screen {
-  border: 2px solid blue;
   height: calc(100% - 140px);
   overflow: auto;
+  background-color: aliceblue;
 }
 .chat_screen .chat_screen_bar {
   position: sticky;
@@ -241,11 +240,11 @@ a.preview_wrap .preview:hover {
 }
 
 .bubble_container {
-  background-color: #d8d8d8;
+  padding-top: 20px;
 }
 
 .chat_user {
-  background-color: antiquewhite;
+  background-color: aliceblue;
 }
 
 .bubble_wrap {
@@ -263,7 +262,7 @@ a.preview_wrap .preview:hover {
 }
 
 .chat_form {
-  background-color: skyblue;
+  background-color: white;
   height: 140px;
 }
 
