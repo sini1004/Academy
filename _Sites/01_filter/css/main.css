@@ -31,7 +31,7 @@ h1 {
   font-family: 'GmarketSansMedium', sans-serif;
   font-size: 50px;
 }
-.active {
+.nav li a.active {
   background-color: #0c38ff;
   color: white;
   border-radius: 10px 10px 0 0;
