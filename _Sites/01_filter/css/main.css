@@ -26,11 +26,16 @@ header{
   max-width: 1200px;
   margin: 0 auto;
   padding: 50px 0 0;
-  border-bottom: 1px solid #f1f1f1;
 }
 h1 {
   font-family: 'GmarketSansMedium', sans-serif;
   font-size: 50px;
+}
+.active {
+  background-color: #0c38ff;
+  color: white;
+  border-radius: 10px 10px 0 0;
+  border: none;
 }
 
 main {
@@ -48,6 +53,13 @@ main {
   border: 1px solid #ccc;
   border-right: none;
   border-bottom: none;
+  border-radius: 10px 10px 0 0;
+}
+.nav li:hover a {
+  background-color: #0c38ff;
+  color: white;
+  border-radius: 10px 10px 0 0;
+  border: none;
 }
 .nav li:last-child {
   border-right: 1px solid #ccc;
@@ -57,6 +69,7 @@ main {
   width: 120px;
   line-height: 40px;
   text-align: center;
+  color: #999;
 }
 
 section {
