@@ -31,3 +31,12 @@ $('.btn_motion').click(function(){
 $('.btn_award').click(function(){
   $('.thumb').isotope({ filter: '.award' });
 })
+
+//ligthbox2 플러그인 - 이미지 팝업
+lightbox.option({
+  'resizeDuration': 200, //리사이징 애니메이션 시간 ms단위
+  'wrapAround': true, //세트 loop여부
+  'fadeDuration': 600, //페이지 변환시 페이드 시간
+  'positionFromTop': 100, //팝업 위치, 위에서부터 얼마나 떨어져 있나 (px)
+  'showImageNumberLabel' : false //팝업하단 페이지 넘버 표시 유무
+})
