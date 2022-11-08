@@ -7,7 +7,6 @@ const modalType = document.querySelector("#modal .type");
 for (let aa of thumbBtn) {
 	aa.addEventListener("click", (e) => {
 		e.preventDefault();
-		// console.log('aa');
 		let img = e.currentTarget.querySelector("a").getAttribute("href");
 		let title = e.currentTarget.querySelector(".title").innerHTML;
 		let type = e.currentTarget.querySelector(".type").innerText;
