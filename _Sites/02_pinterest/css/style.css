@@ -120,7 +120,6 @@ header ul.sns li a i {
 }
 
 main {
-  border: 3px solid pink;
   margin-left: 400px;
   padding: 3em;
 }
@@ -172,29 +171,24 @@ nav li + li {
   margin-left: 1.5em;
 }
 
-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 15px;
+article {
+  width: 25%;
+  padding: 15px;
 }
 @media (max-width:1599px) {
-  section {
-    grid-template-columns: 1fr 1fr 1fr;
+  article {
+    width: 33.3%;
   }
 }
 @media (max-width: 899px) {
-  section {
-    grid-template-columns: 1fr 1fr;
+  article {
+    width: 50%;
   }
 }
 @media (max-width: 539px) {
-  section {
-    grid-template-columns: 1fr;
+  article {
+    width: 100%;
   }
-}
-
-article {
-  border: 1px solid red;
 }
 article div {
   padding: 10px;

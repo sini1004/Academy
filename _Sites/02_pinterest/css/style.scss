@@ -124,7 +124,6 @@ header {
 }
 
 main {
-  border: 3px solid pink;
   margin-left: 400px;
   padding: 3em;
 
@@ -177,23 +176,23 @@ nav {
 }
 
 section {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 15px;
-
-  @media #{$large} {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  @media #{$medium} {
-    grid-template-columns: 1fr 1fr;
-  }
-  @media #{$small} {
-    grid-template-columns: 1fr;
-  }
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr 1fr;
+  // gap: 15px;
 }
 article {
-  // width: 20%;
-  border: 1px solid red;
+  width: 25%;
+  padding: 15px;
+  // border: 1px solid red;
+  @media #{$large} {
+    width: 33.3%;
+  }
+  @media #{$medium} {
+    width: 50%;
+  }
+  @media #{$small} {
+    width: 100%;
+  }
   div {
     padding: 10px;
     box-shadow: 0 0 6px rgba(0 0 0 /20%);
