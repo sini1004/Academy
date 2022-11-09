@@ -1,15 +1,8 @@
 window.addEventListener("load", () => {
-	var elem = document.querySelector("section");
-	var iso = new Isotope(elem, {
-		// options
-		itemSelector: "article",
-		layoutMode: "fitRows",
-	});
-
-	// element argument can be a selector string
-	//   for an individual element
+	// const elem = document.querySelector("section");
 	var iso = new Isotope("section", {
 		// options
+		itemSelector: "article",
 	});
 
 	const btnFilter = document.querySelectorAll(".btns > li");
@@ -21,7 +14,13 @@ window.addEventListener("load", () => {
 				el.classList.remove("on");
 			}
 
+			//클릭한 버튼에 클래스 넣어줌
 			e.currentTarget.classList.add("on");
+
+			//클릭한 버튼에 있는 a태그안에 속성 href의 value 값 가져오기
+			const filtering = e.currentTarget.querySelector("a").getAttribute("href");
+
+			iso.arrange({ filter: filtering });
 		});
 	}
 });
