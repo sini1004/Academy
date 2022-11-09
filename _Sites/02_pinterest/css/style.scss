@@ -4,10 +4,17 @@ $large-semi: "(max-width:1199px)"; //1200px보다 작은 크기
 $medium: "(max-width: 899px)";
 $small-semi: "(max-width: 767px)";
 $small: "(max-width: 539px)";
+$gradient: linear-gradient(45deg, #fdf66d, #128762);
 
 @mixin space() {
   content: "";
   display: block;
+}
+
+ul::after,
+section::after {
+  @include space();
+  clear: both;
 }
 
 body {
@@ -126,5 +133,84 @@ main {
   }
   @media #{$large-semi} {
     margin-left: 0;
+    width: 100%;
+  }
+}
+
+nav {
+  .btns {
+    display: flex;
+    justify-content: center;
+  }
+  li {
+    width: 100px;
+    height: 30px;
+    a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.1);
+      border-radius: 8px;
+      font: {
+        family: "Averia Libre", cursive;
+        size: 1.8em;
+      }
+      color: #333;
+      text-align: center;
+      line-height: 30px;
+      letter-spacing: 0.2em;
+      &:hover {
+        background: $gradient;
+        color: white;
+        // box-shadow: 0 0 10px rgba($gradient, $alpha: 0.1);
+      }
+    }
+    @media #{$small} {
+      width: 33.33%;
+      margin-left: 0.8em;
+    }
+  }
+  li + li {
+    margin-left: 1.5em;
+  }
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+
+  @media #{$large} {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media #{$medium} {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media #{$small} {
+    grid-template-columns: 1fr;
+  }
+}
+article {
+  // width: 20%;
+  border: 1px solid red;
+  div {
+    padding: 10px;
+    box-shadow: 0 0 6px rgba(0 0 0 /20%);
+  }
+  img {
+    width: 100%;
+  }
+  h2 {
+    letter-spacing: -0.05em;
+    color: #444;
+    font: {
+      family: "Averia Libre", cursive;
+      size: 1.8em;
+    }
+  }
+  p {
+    font-size: 1.3em;
+    color: #999;
   }
 }
