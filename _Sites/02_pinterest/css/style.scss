@@ -125,7 +125,7 @@ header {
 
 main {
   margin-left: 400px;
-  padding: 3em;
+  padding: 6em 2em;
 
   @media #{$large} {
     margin-left: 350px;
@@ -137,6 +137,7 @@ main {
 }
 
 nav {
+  margin-bottom: 3em;
   .btns {
     display: flex;
     justify-content: center;
@@ -162,12 +163,16 @@ nav {
       &:hover {
         background: $gradient;
         color: white;
-        // box-shadow: 0 0 10px rgba($gradient, $alpha: 0.1);
+        box-shadow: 0 0 8px $gradient;
       }
     }
     @media #{$small} {
       width: 33.33%;
       margin-left: 0.8em;
+    }
+    &.on a {
+      background: $gradient;
+      color: white;
     }
   }
   li + li {
@@ -182,7 +187,7 @@ section {
 }
 article {
   width: 25%;
-  padding: 15px;
+  padding: 10px;
   // border: 1px solid red;
   @media #{$large} {
     width: 33.3%;

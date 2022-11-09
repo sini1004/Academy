@@ -121,7 +121,7 @@ header ul.sns li a i {
 
 main {
   margin-left: 400px;
-  padding: 3em;
+  padding: 6em 2em;
 }
 @media (max-width:1599px) {
   main {
@@ -135,6 +135,9 @@ main {
   }
 }
 
+nav {
+  margin-bottom: 3em;
+}
 nav .btns {
   display: flex;
   justify-content: center;
@@ -160,6 +163,7 @@ nav li a {
 nav li a:hover {
   background: linear-gradient(45deg, #fdf66d, #128762);
   color: white;
+  box-shadow: 0 0 8px linear-gradient(45deg, #fdf66d, #128762);
 }
 @media (max-width: 539px) {
   nav li {
@@ -167,13 +171,17 @@ nav li a:hover {
     margin-left: 0.8em;
   }
 }
+nav li.on a {
+  background: linear-gradient(45deg, #fdf66d, #128762);
+  color: white;
+}
 nav li + li {
   margin-left: 1.5em;
 }
 
 article {
   width: 25%;
-  padding: 15px;
+  padding: 10px;
 }
 @media (max-width:1599px) {
   article {

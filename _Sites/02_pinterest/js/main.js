@@ -11,4 +11,17 @@ window.addEventListener("load", () => {
 	var iso = new Isotope("section", {
 		// options
 	});
+
+	const btnFilter = document.querySelectorAll(".btns > li");
+	for (let el of btnFilter) {
+		el.addEventListener("click", (e) => {
+			e.preventDefault();
+
+			for (let el of btnFilter) {
+				el.classList.remove("on");
+			}
+
+			e.currentTarget.classList.add("on");
+		});
+	}
 });
