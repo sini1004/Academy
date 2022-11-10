@@ -1,0 +1,53 @@
+$gray1: #333;
+$gray2: #666;
+$gray3: #999;
+$gray4: #ddd;
+@mixin border($size, $color) {
+  border: $size solid $color;
+}
+
+body {
+}
+main {
+  @include border(8px, red);
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+header {
+  @include border(2px, green);
+  width: 20%;
+  padding: 10vh 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+  }
+  address {
+  }
+}
+
+nav {
+  @include border(4px, yellow);
+  position: absolute;
+  top: 10vh;
+  right: 5vw;
+  ul {
+    display: flex;
+    li {
+      a {
+        color: $gray3;
+        font-size: 20px;
+        margin-right: 1.5vw;
+      }
+    }
+  }
+}
+
+section {
+  @include border(10px, pink);
+  width: 80%;
+  margin-top: 15vh;
+}
