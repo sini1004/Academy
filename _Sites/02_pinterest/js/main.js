@@ -27,4 +27,27 @@ window.addEventListener("load", () => {
 	//각 article을 클릭하면 팝업창 뜨게
 	const items = document.querySelectorAll("article");
 	const popup = document.querySelector("#popup");
+
+	for (const pop of items) {
+		pop.addEventListener("click", (e) => {
+			//화면 너비구하기
+			const winWidth = document.body.clientWidth;
+			if (winWidth > 767) {
+				//화면 너비가 767보다 컸을때만 적용
+				//클릭한 article img의 src값, h2, p를 변수에 저장
+				const img = e.currentTarget.querySelector("img").getAttribute("src");
+				const title = e.currentTarget.querySelector("h2").innerText;
+				const desc = e.currentTarget.querySelector("p").innerText;
+
+				popup.querySelector("img").setAttribute("src", img);
+				popup.querySelector("h2").innerText = title;
+				popup.querySelector("p").innerText = desc;
+
+				popup.classList.add("on");
+			}
+		});
+	}
+	popup.addEventListener("click", () => {
+		popup.classList.remove("on");
+	});
 });

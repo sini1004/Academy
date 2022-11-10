@@ -218,3 +218,42 @@ article {
     color: #999;
   }
 }
+
+#popup {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0 0 0 /30%);
+  div {
+    background-color: white;
+    padding: 3rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0 0 0 /50%);
+  }
+  img {
+    width: auto;
+    height: auto;
+    max-width: 80vw;
+    max-height: 60vh;
+  }
+  h2 {
+    font: {
+      family: "Averia Libre", cursive;
+      size: 3em;
+    }
+    margin: 20px 0 5px;
+  }
+  p {
+    font-size: 2em;
+    color: #999;
+  }
+  &.on {
+    display: flex;
+  }
+}
