@@ -37,14 +37,6 @@ header h1::before {
   opacity: 0.7;
   bottom: -1.7em;
 }
-header h1::after {
-  content: "";
-  display: block;
-  width: 195px;
-  height: 4px;
-  background: white;
-  border-radius: 10px;
-}
 @media (max-width:1599px) {
   header h1 {
     left: 30px;
@@ -77,8 +69,7 @@ header ul.sns {
   bottom: 60px;
   transform: translateY(50%);
   display: flex;
-  margin-left: 4em;
-  right: 10em;
+  margin-left: 8em;
 }
 header ul.sns li {
   margin: 0 1em;
@@ -225,7 +216,7 @@ article p {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 #popup div {
   background-color: white;

@@ -50,13 +50,6 @@ header {
       opacity: 0.7;
       bottom: -1.7em;
     }
-    &::after {
-      @include space();
-      width: 195px;
-      height: 4px;
-      background: white;
-      border-radius: 10px;
-    }
     @media #{$large} {
       left: 30px;
     }
@@ -87,8 +80,7 @@ header {
     bottom: 60px;
     transform: translateY(50%);
     display: flex;
-    margin-left: 4em;
-    right: 10em;
+    margin-left: 8em;
     li {
       margin: 0 1em;
       a {
@@ -228,7 +220,7 @@ article {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0 0 0 /30%);
+  background-color: rgba(0 0 0 /40%);
   div {
     background-color: white;
     padding: 3rem;
