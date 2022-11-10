@@ -23,4 +23,8 @@ window.addEventListener("load", () => {
 			iso.arrange({ filter: filtering });
 		});
 	}
+
+	//각 article을 클릭하면 팝업창 뜨게
+	const items = document.querySelectorAll("article");
+	const popup = document.querySelector("#popup");
 });
