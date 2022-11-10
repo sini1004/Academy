@@ -223,10 +223,21 @@ article {
   background-color: rgba(0 0 0 /40%);
   div {
     background-color: white;
-    padding: 3rem;
+    padding: 4rem 3rem;
     border-radius: 8px;
     text-align: center;
     box-shadow: 5px 5px 10px rgba(0 0 0 /50%);
+    position: relative;
+  }
+  button {
+    position: absolute;
+    top: 1rem;
+    right: 1.4rem;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 2rem;
+    background: none;
   }
   img {
     width: auto;
