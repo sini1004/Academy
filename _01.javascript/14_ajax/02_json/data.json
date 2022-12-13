@@ -3,5 +3,18 @@
     { "location":"샌프란시스코, CA", "date":"10월 14일","map":"img/map-ca.png" },
     { "location":"오스틴, TX", "date":"10월 17일","map":"img/map-tx.png" },
     { "location":"뉴욕, NY", "date":"10월 20일","map":"img/map-ny.png" }
+  ],
+
+  "comment" : [
+    {
+      "comment" : "설명입니다.",
+      "skill" : "html, css, jquery사용",
+      "alt" : "이미지1"
+    },
+    {
+      "comment" : "내용넣기.",
+      "skill" : "javascript사용",
+      "alt" : "이미지2"
+    }
   ]
 }
