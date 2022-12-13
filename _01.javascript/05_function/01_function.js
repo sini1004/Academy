@@ -1,4 +1,3 @@
-
 /*
 함수 function : 특정한 일을 수행하는 코드의 집합
 가독성, 재사용 가능, 유지보수성
@@ -26,32 +25,26 @@
   ++++ 매개변수(인자) 이름도 의미있게
 */
 
-function add(num1, num2){
-  const result = num1 + num2;
-  return result;
+function add(num1, num2) {
+	const result = num1 + num2;
+	return result;
 }
 
-console.log(add(1,2));
-
+console.log(add(1, 2));
 
 //즉시 실행 함수
 (function () {
-  console.log('🏃🏻‍♀️');
+	console.log("🏃🏻‍♀️");
 });
 
-
-function add(num1, num2){
-  const result = num1 + num2;
-  return result;
+function add(num1, num2) {
+	const result = num1 + num2;
+	return result;
 }
 
-console.log(add(1,2));
-
+console.log(add(1, 2));
 
 //즉시실행 함수
-(function (){ 
-  console.log('🍗');
-})(); 
-
-
-
+(function () {
+	console.log("🍗");
+})();

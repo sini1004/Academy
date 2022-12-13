@@ -1,0 +1,258 @@
+ul::after,
+section::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 100%;
+  background-image: linear-gradient(45deg, #fdf66d, #128762);
+}
+header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-150%);
+  color: white;
+  font-family: "Averia Libre", cursive;
+  font-size: 4em;
+}
+header h1::before {
+  content: "";
+  display: block;
+  content: "web gallery";
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  opacity: 0.7;
+  bottom: -1.7em;
+}
+@media (max-width:1599px) {
+  header h1 {
+    left: 30px;
+  }
+}
+@media (max-width:1199px) {
+  header h1 {
+    transform: translateY(-50%);
+    font-size: 3em;
+  }
+  header h1::before {
+    display: none;
+  }
+  header h1::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 3px;
+  }
+}
+@media (max-width: 539px) {
+  header h1 {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+  }
+}
+header ul.sns {
+  position: absolute;
+  bottom: 60px;
+  transform: translateY(50%);
+  display: flex;
+  margin-left: 8em;
+}
+header ul.sns li {
+  margin: 0 1em;
+}
+header ul.sns li a {
+  color: white;
+  font-size: 1.6em;
+}
+header ul.sns li a i {
+  font-size: 1.1em;
+}
+@media (max-width: 899px) {
+  header ul.sns li a span {
+    display: none;
+  }
+}
+@media (max-width:1199px) {
+  header ul.sns {
+    bottom: 50px;
+    right: 1em;
+  }
+}
+@media (max-width: 539px) {
+  header ul.sns {
+    display: none;
+  }
+}
+@media (max-width:1599px) {
+  header {
+    width: 350px;
+  }
+}
+@media (max-width:1199px) {
+  header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+  }
+}
+
+main {
+  margin-left: 400px;
+  padding: 6em 2em;
+}
+@media (max-width:1599px) {
+  main {
+    margin-left: 350px;
+  }
+}
+@media (max-width:1199px) {
+  main {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+nav {
+  margin-bottom: 3em;
+}
+nav .btns {
+  display: flex;
+  justify-content: center;
+}
+nav li {
+  width: 100px;
+  height: 30px;
+}
+nav li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-family: "Averia Libre", cursive;
+  font-size: 1.8em;
+  color: #333;
+  text-align: center;
+  line-height: 30px;
+  letter-spacing: 0.2em;
+}
+nav li a:hover {
+  background: linear-gradient(45deg, #fdf66d, #128762);
+  color: white;
+  box-shadow: 0 0 8px linear-gradient(45deg, #fdf66d, #128762);
+}
+@media (max-width: 539px) {
+  nav li {
+    width: 33.33%;
+    margin-left: 0.8em;
+  }
+}
+nav li.on a {
+  background: linear-gradient(45deg, #fdf66d, #128762);
+  color: white;
+}
+nav li + li {
+  margin-left: 1.5em;
+}
+
+article {
+  width: 25%;
+  padding: 10px;
+}
+@media (max-width:1599px) {
+  article {
+    width: 33.3%;
+  }
+}
+@media (max-width: 899px) {
+  article {
+    width: 50%;
+  }
+}
+@media (max-width: 539px) {
+  article {
+    width: 100%;
+  }
+}
+article div {
+  padding: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+article img {
+  width: 100%;
+}
+article h2 {
+  letter-spacing: -0.05em;
+  color: #444;
+  font-family: "Averia Libre", cursive;
+  font-size: 1.8em;
+}
+article p {
+  font-size: 1.3em;
+  color: #999;
+}
+
+#popup {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#popup div {
+  background-color: white;
+  padding: 4rem 3rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+#popup button {
+  position: absolute;
+  top: 1rem;
+  right: 1.4rem;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 2rem;
+  background: none;
+}
+#popup img {
+  width: auto;
+  height: auto;
+  max-width: 80vw;
+  max-height: 60vh;
+}
+#popup h2 {
+  font-family: "Averia Libre", cursive;
+  font-size: 3em;
+  margin: 20px 0 5px;
+}
+#popup p {
+  font-size: 2em;
+  color: #999;
+}
+#popup.on {
+  display: flex;
+}
+
+/*# sourceMappingURL=style.css.map */
